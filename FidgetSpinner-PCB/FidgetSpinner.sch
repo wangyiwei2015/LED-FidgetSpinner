@@ -14,104 +14,82 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_Microchip_ATmega:ATmega328P-AU U1
-U 1 1 612B938D
-P 2600 5400
-F 0 "U1" H 2600 5350 50  0000 C CNN
-F 1 "ATmega328P-AU" H 2550 5500 50  0000 C CNN
-F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 2600 5400 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 2600 5400 50  0001 C CNN
-	1    2600 5400
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:Crystal Y1
 U 1 1 612BB429
-P 3700 4850
-F 0 "Y1" V 3654 4981 50  0000 L CNN
-F 1 "16M" V 3800 4900 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_5032-2Pin_5.0x3.2mm_HandSoldering" H 3700 4850 50  0001 C CNN
-F 3 "~" H 3700 4850 50  0001 C CNN
-	1    3700 4850
+P 2350 3750
+F 0 "Y1" V 2350 3900 50  0000 L CNN
+F 1 "16M" V 2350 3750 50  0000 C CNN
+F 2 "Crystal:Crystal_SMD_5032-2Pin_5.0x3.2mm_HandSoldering" H 2350 3750 50  0001 C CNN
+F 3 "~" H 2350 3750 50  0001 C CNN
+	1    2350 3750
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:C_Small C1
 U 1 1 612BDCCE
-P 4100 4700
-F 0 "C1" V 3871 4700 50  0000 C CNN
-F 1 "22p" V 3962 4700 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4100 4700 50  0001 C CNN
-F 3 "~" H 4100 4700 50  0001 C CNN
-	1    4100 4700
+P 2750 3600
+F 0 "C1" V 2700 3500 50  0000 C CNN
+F 1 "22p" V 2800 3700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2750 3600 50  0001 C CNN
+F 3 "~" H 2750 3600 50  0001 C CNN
+	1    2750 3600
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:C_Small C2
 U 1 1 612BE64D
-P 4100 5000
-F 0 "C2" V 3871 5000 50  0000 C CNN
-F 1 "22p" V 3962 5000 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4100 5000 50  0001 C CNN
-F 3 "~" H 4100 5000 50  0001 C CNN
-	1    4100 5000
+P 2750 3900
+F 0 "C2" V 2800 3800 50  0000 C CNN
+F 1 "22p" V 2700 4000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2750 3900 50  0001 C CNN
+F 3 "~" H 2750 3900 50  0001 C CNN
+	1    2750 3900
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR03
 U 1 1 612BED8F
-P 4350 5050
-F 0 "#PWR03" H 4350 4800 50  0001 C CNN
-F 1 "GND" H 4355 4877 50  0000 C CNN
-F 2 "" H 4350 5050 50  0001 C CNN
-F 3 "" H 4350 5050 50  0001 C CNN
-	1    4350 5050
+P 3000 3950
+F 0 "#PWR03" H 3000 3700 50  0001 C CNN
+F 1 "GND" H 3005 3777 50  0000 C CNN
+F 2 "" H 3000 3950 50  0001 C CNN
+F 3 "" H 3000 3950 50  0001 C CNN
+	1    3000 3950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4200 4700 4350 4700
+	2850 3600 3000 3600
 Wire Wire Line
-	4350 4700 4350 5000
+	3000 3600 3000 3900
 Wire Wire Line
-	4200 5000 4350 5000
-Connection ~ 4350 5000
+	2850 3900 3000 3900
+Connection ~ 3000 3900
 Wire Wire Line
-	4350 5000 4350 5050
+	3000 3900 3000 3950
 Wire Wire Line
-	4000 4700 3700 4700
+	2650 3600 2350 3600
 Wire Wire Line
-	4000 5000 3700 5000
+	2650 3900 2350 3900
 $Comp
 L power:VCC #PWR02
 U 1 1 612C1BE2
-P 2650 3750
-F 0 "#PWR02" H 2650 3600 50  0001 C CNN
-F 1 "VCC" H 2665 3923 50  0000 C CNN
-F 2 "" H 2650 3750 50  0001 C CNN
-F 3 "" H 2650 3750 50  0001 C CNN
-	1    2650 3750
-	1    0    0    -1  
+P 2550 5450
+F 0 "#PWR02" H 2550 5300 50  0001 C CNN
+F 1 "VCC" V 2565 5623 50  0000 C CNN
+F 2 "" H 2550 5450 50  0001 C CNN
+F 3 "" H 2550 5450 50  0001 C CNN
+	1    2550 5450
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	2600 3900 2600 3800
-Wire Wire Line
-	2600 3800 2650 3800
-Wire Wire Line
-	2650 3800 2650 3750
-Wire Wire Line
-	2700 3900 2700 3800
-Wire Wire Line
-	2700 3800 2650 3800
-Connection ~ 2650 3800
 $Comp
 L power:GND #PWR01
 U 1 1 612C34AE
-P 2600 6900
-F 0 "#PWR01" H 2600 6650 50  0001 C CNN
-F 1 "GND" H 2600 6750 50  0000 C CNN
-F 2 "" H 2600 6900 50  0001 C CNN
-F 3 "" H 2600 6900 50  0001 C CNN
-	1    2600 6900
+P 2200 6650
+F 0 "#PWR01" H 2200 6400 50  0001 C CNN
+F 1 "GND" H 2200 6500 50  0000 C CNN
+F 2 "" H 2200 6650 50  0001 C CNN
+F 3 "" H 2200 6650 50  0001 C CNN
+	1    2200 6650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -177,7 +155,7 @@ U 1 1 612CD20C
 P 3550 1650
 F 0 "BT1" H 3668 1746 50  0000 L CNN
 F 1 "CR2032" H 3668 1655 50  0000 L CNN
-F 2 "Battery:BatteryHolder_ComfortableElectronic_CH273-2450_1x2450" V 3550 1710 50  0001 C CNN
+F 2 "Battery:BatteryHolder_Keystone_1060_1x2032" V 3550 1710 50  0001 C CNN
 F 3 "~" V 3550 1710 50  0001 C CNN
 	1    3550 1650
 	1    0    0    -1  
@@ -277,7 +255,7 @@ U 1 1 612D615A
 P 4050 1650
 F 0 "BT2" H 4168 1746 50  0000 L CNN
 F 1 "CR2032" H 4168 1655 50  0000 L CNN
-F 2 "Battery:BatteryHolder_ComfortableElectronic_CH273-2450_1x2450" V 4050 1710 50  0001 C CNN
+F 2 "Battery:BatteryHolder_Keystone_1060_1x2032" V 4050 1710 50  0001 C CNN
 F 3 "~" V 4050 1710 50  0001 C CNN
 	1    4050 1650
 	1    0    0    -1  
@@ -288,7 +266,7 @@ U 1 1 612D66FF
 P 4550 1650
 F 0 "BT3" H 4668 1746 50  0000 L CNN
 F 1 "CR2032" H 4668 1655 50  0000 L CNN
-F 2 "Battery:BatteryHolder_ComfortableElectronic_CH273-2450_1x2450" V 4550 1710 50  0001 C CNN
+F 2 "Battery:BatteryHolder_Keystone_1060_1x2032" V 4550 1710 50  0001 C CNN
 F 3 "~" V 4550 1710 50  0001 C CNN
 	1    4550 1650
 	1    0    0    -1  
@@ -330,9 +308,6 @@ Wire Wire Line
 Wire Wire Line
 	3500 1400 3550 1400
 Connection ~ 3550 1400
-NoConn ~ 2000 4500
-NoConn ~ 2000 4400
-NoConn ~ 2000 4200
 $Comp
 L power:GND #PWR0105
 U 1 1 612E12E2
@@ -383,105 +358,38 @@ Wire Wire Line
 Connection ~ 2450 1850
 Wire Wire Line
 	2450 1850 2550 1850
-Text GLabel 3350 5900 2    50   BiDi ~ 0
-RX
-Text GLabel 3350 6000 2    50   BiDi ~ 0
-TX
-Wire Wire Line
-	3200 5900 3350 5900
-Wire Wire Line
-	3200 6000 3350 6000
-$Comp
-L Connector_Generic:Conn_02x04_Counter_Clockwise J1
-U 1 1 612F4B69
-P 5350 6900
-F 0 "J1" H 5400 7217 50  0000 C CNN
-F 1 "Holes" H 5400 7126 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 5350 6900 50  0001 C CNN
-F 3 "~" H 5350 6900 50  0001 C CNN
-	1    5350 6900
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0106
 U 1 1 612F9E23
-P 5050 6800
-F 0 "#PWR0106" H 5050 6550 50  0001 C CNN
-F 1 "GND" V 5055 6672 50  0000 R CNN
-F 2 "" H 5050 6800 50  0001 C CNN
-F 3 "" H 5050 6800 50  0001 C CNN
-	1    5050 6800
+P 5250 6750
+F 0 "#PWR0106" H 5250 6500 50  0001 C CNN
+F 1 "GND" V 5250 6550 50  0000 C CNN
+F 2 "" H 5250 6750 50  0001 C CNN
+F 3 "" H 5250 6750 50  0001 C CNN
+	1    5250 6750
 	0    1    1    0   
 $EndComp
-Text GLabel 3350 5700 2    50   BiDi ~ 0
-RST
-Text GLabel 5750 6800 2    50   BiDi ~ 0
-RST
-Wire Wire Line
-	3200 5700 3350 5700
-Wire Wire Line
-	5750 6800 5650 6800
-Wire Wire Line
-	5050 6800 5150 6800
+Text GLabel 5250 6650 0    50   BiDi ~ 0
+SWDIO
 $Comp
 L power:VCC #PWR0107
 U 1 1 612FDAD6
-P 5050 7000
-F 0 "#PWR0107" H 5050 6850 50  0001 C CNN
-F 1 "VCC" V 5065 7127 50  0000 L CNN
-F 2 "" H 5050 7000 50  0001 C CNN
-F 3 "" H 5050 7000 50  0001 C CNN
-	1    5050 7000
+P 5250 6950
+F 0 "#PWR0107" H 5250 6800 50  0001 C CNN
+F 1 "VCC" V 5250 7150 50  0000 C CNN
+F 2 "" H 5250 6950 50  0001 C CNN
+F 3 "" H 5250 6950 50  0001 C CNN
+	1    5250 6950
 	0    -1   -1   0   
 $EndComp
-Text GLabel 5050 7100 0    50   BiDi ~ 0
-RX
-Text GLabel 5750 7100 2    50   BiDi ~ 0
-TX
-Text GLabel 5050 6900 0    50   BiDi ~ 0
-MOSI
-Text GLabel 5750 6900 2    50   BiDi ~ 0
-CLK
-Text GLabel 5750 7000 2    50   BiDi ~ 0
-MISO
-Text GLabel 3300 4600 2    50   BiDi ~ 0
-MISO
-Text GLabel 3300 4700 2    50   BiDi ~ 0
-CLK
-Text GLabel 3300 4500 2    50   BiDi ~ 0
-MOSI
+Text GLabel 5250 6850 0    50   BiDi ~ 0
+SWCLK
 Wire Wire Line
-	3550 4800 3550 4700
+	2200 3600 2350 3600
+Connection ~ 2350 3600
 Wire Wire Line
-	3550 4700 3700 4700
-Wire Wire Line
-	3200 4800 3550 4800
-Connection ~ 3700 4700
-Wire Wire Line
-	3550 4900 3550 5000
-Wire Wire Line
-	3550 5000 3700 5000
-Wire Wire Line
-	3200 4900 3550 4900
-Connection ~ 3700 5000
-Wire Wire Line
-	3200 4700 3300 4700
-Wire Wire Line
-	3200 4600 3300 4600
-Wire Wire Line
-	3200 4500 3300 4500
-Wire Wire Line
-	5050 6900 5150 6900
-Wire Wire Line
-	5050 7000 5150 7000
-Wire Wire Line
-	5050 7100 5150 7100
-Wire Wire Line
-	5750 6900 5650 6900
-Wire Wire Line
-	5750 7000 5650 7000
-Wire Wire Line
-	5750 7100 5650 7100
+	2200 3900 2350 3900
+Connection ~ 2350 3900
 Wire Notes Line
 	1750 1050 5050 1050
 Wire Notes Line
@@ -501,10 +409,10 @@ Wire Notes Line
 Wire Notes Line
 	4700 7250 4700 6450
 Text Notes 4700 6450 0    50   ~ 0
-Computer Interface
-Text GLabel 3600 6100 2    50   BiDi ~ 0
+SWD Interface
+Text GLabel 3500 4050 2    50   BiDi ~ 0
 ~INT_C
-Text GLabel 3850 6200 2    50   BiDi ~ 0
+Text GLabel 3750 4150 2    50   BiDi ~ 0
 INT_B
 $Comp
 L Device:LED D2
@@ -612,10 +520,6 @@ Wire Wire Line
 	7300 2850 7400 2850
 Text GLabel 6800 3300 0    50   BiDi ~ 0
 ~INT_C
-Wire Wire Line
-	3200 6100 3600 6100
-Wire Wire Line
-	3200 6200 3850 6200
 Wire Wire Line
 	6850 4900 7000 4900
 Connection ~ 7000 4900
@@ -911,43 +815,22 @@ Wire Wire Line
 Connection ~ 9200 2900
 Wire Wire Line
 	9200 2900 9200 3150
-Text GLabel 3300 4200 2    50   BiDi ~ 0
+Text GLabel 3300 3550 2    50   BiDi ~ 0
 L0
-Text GLabel 3300 4300 2    50   BiDi ~ 0
+Text GLabel 3300 3650 2    50   BiDi ~ 0
 L1
-Text GLabel 3300 4400 2    50   BiDi ~ 0
+Text GLabel 3300 3750 2    50   BiDi ~ 0
 L2
-Text GLabel 3300 5100 2    50   BiDi ~ 0
+Text GLabel 3300 3850 2    50   BiDi ~ 0
 L3
-Text GLabel 3300 6300 2    50   BiDi ~ 0
+Text GLabel 3600 3550 2    50   BiDi ~ 0
 L4
-Text GLabel 3300 6400 2    50   BiDi ~ 0
+Text GLabel 3600 3650 2    50   BiDi ~ 0
 L5
-Text GLabel 3300 6500 2    50   BiDi ~ 0
+Text GLabel 3600 3750 2    50   BiDi ~ 0
 L6
-Text GLabel 3300 6600 2    50   BiDi ~ 0
+Text GLabel 3600 3850 2    50   BiDi ~ 0
 L7
-Wire Wire Line
-	3200 4200 3300 4200
-Wire Wire Line
-	3200 4300 3300 4300
-Wire Wire Line
-	3200 4400 3300 4400
-Wire Wire Line
-	3200 5100 3300 5100
-Wire Wire Line
-	3200 6300 3300 6300
-Wire Wire Line
-	3200 6400 3300 6400
-Wire Wire Line
-	3200 6500 3300 6500
-Wire Wire Line
-	3200 6600 3300 6600
-NoConn ~ 3200 5200
-NoConn ~ 3200 5300
-NoConn ~ 3200 5400
-NoConn ~ 3200 5500
-NoConn ~ 3200 5600
 Wire Notes Line
 	1750 3350 4550 3350
 Wire Notes Line
@@ -1014,4 +897,103 @@ Wire Notes Line
 	8050 4750 8050 2450
 Wire Notes Line
 	9350 4750 8050 4750
+$Comp
+L WYW_Library:STM32L010K8T6 U1
+U 1 1 6133D8CA
+P 3450 6650
+F 0 "U1" H 3450 8815 50  0000 C CNN
+F 1 "STM32L010K8T6" H 3450 8724 50  0000 C CNN
+F 2 "" H 3450 6650 50  0001 C CNN
+F 3 "" H 3450 6650 50  0001 C CNN
+	1    3450 6650
+	1    0    0    -1  
+$EndComp
+Text GLabel 5250 7050 0    50   BiDi ~ 0
+SWEN
+Wire Wire Line
+	2200 6450 2200 6550
+Connection ~ 2200 6550
+Wire Wire Line
+	2200 6550 2200 6650
+$Comp
+L Connector_Generic:Conn_01x05 J1
+U 1 1 6136C921
+P 5450 6850
+F 0 "J1" H 5530 6892 50  0000 L CNN
+F 1 "Conn_01x05" H 5530 6801 50  0000 L CNN
+F 2 "" H 5450 6850 50  0001 C CNN
+F 3 "~" H 5450 6850 50  0001 C CNN
+	1    5450 6850
+	1    0    0    -1  
+$EndComp
+Text GLabel 4100 5250 2    50   BiDi ~ 0
+SWDIO
+Text GLabel 4100 5150 2    50   BiDi ~ 0
+SWCLK
+Text GLabel 2200 6100 0    50   BiDi ~ 0
+SWEN
+$Comp
+L Device:R_Small R11
+U 1 1 61379FFC
+P 2200 6350
+F 0 "R11" H 2100 6350 50  0000 C CNN
+F 1 "10k" H 2350 6350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 2200 6350 50  0001 C CNN
+F 3 "~" H 2200 6350 50  0001 C CNN
+	1    2200 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 6450 2950 6450
+Wire Wire Line
+	2200 6550 2950 6550
+$Comp
+L Device:R_Small R12
+U 1 1 613D0429
+P 2750 6050
+F 0 "R12" V 2650 6050 50  0000 C CNN
+F 1 "10k" V 2850 6050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 2750 6050 50  0001 C CNN
+F 3 "~" H 2750 6050 50  0001 C CNN
+	1    2750 6050
+	0    1    1    0   
+$EndComp
+Connection ~ 2200 6450
+Wire Wire Line
+	2950 6250 2200 6250
+Wire Wire Line
+	2200 6100 2200 6250
+Connection ~ 2200 6250
+$Comp
+L power:VCC #PWR09
+U 1 1 613DEC8A
+P 2550 6050
+F 0 "#PWR09" H 2550 5900 50  0001 C CNN
+F 1 "VCC" V 2565 6223 50  0000 C CNN
+F 2 "" H 2550 6050 50  0001 C CNN
+F 3 "" H 2550 6050 50  0001 C CNN
+	1    2550 6050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2550 6050 2650 6050
+Wire Wire Line
+	2850 6050 2950 6050
+Wire Wire Line
+	3950 5150 4100 5150
+Wire Wire Line
+	3950 5250 4100 5250
+Wire Wire Line
+	2700 5350 2700 5450
+Wire Wire Line
+	2550 5450 2700 5450
+Connection ~ 2700 5450
+Wire Wire Line
+	2700 5450 2700 5550
+Wire Wire Line
+	2700 5350 2950 5350
+Wire Wire Line
+	2700 5450 2950 5450
+Wire Wire Line
+	2700 5550 2950 5550
 $EndSCHEMATC
