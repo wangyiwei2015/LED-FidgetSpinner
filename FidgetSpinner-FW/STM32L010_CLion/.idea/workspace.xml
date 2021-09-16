@@ -13,13 +13,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88f10ed7-449d-4950-a953-0e5af46f40b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/OCD_STM32L010_CLion.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner-cache.lib" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner-cache.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/STM32L010_CLion2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/serialmonitor_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.elf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb-bak" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb-bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.sch" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.sch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.sch-bak" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.sch-bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/fp-info-cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/fp-info-cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,12 +62,12 @@
     <property name="cmake.loaded.for.project" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="build.tools" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -69,10 +81,16 @@
       <updated>1630748714727</updated>
       <workItem from="1630748735394" duration="802000" />
       <workItem from="1630749875860" duration="1279000" />
+      <workItem from="1631613637126" duration="5804000" />
+      <workItem from="1631708452069" duration="9385000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
