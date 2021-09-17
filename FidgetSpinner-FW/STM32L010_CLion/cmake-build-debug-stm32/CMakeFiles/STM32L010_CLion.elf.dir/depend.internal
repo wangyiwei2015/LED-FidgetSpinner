@@ -19,6 +19,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -53,6 +55,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -88,6 +92,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -123,6 +129,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -156,6 +164,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -189,6 +199,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -222,6 +234,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -255,6 +269,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -288,6 +304,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -321,6 +339,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -354,6 +374,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -387,6 +409,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -420,6 +444,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -453,6 +479,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -486,6 +514,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -519,6 +549,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -552,6 +584,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -585,6 +619,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -618,6 +654,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
@@ -651,6 +689,8 @@ CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_ha
  ../Drivers/CMSIS/Include/mpu_armv7.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h
+ ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h
