@@ -94,9 +94,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Core/.DS_Store">
-			<Option target="STM32L010_CLion.elf"/>
-		</Unit>
 		<Unit filename="/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Core/Inc/main.h">
 			<Option target="STM32L010_CLion.elf"/>
 		</Unit>
@@ -199,6 +196,12 @@
 		<Unit filename="/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h">
 			<Option target="STM32L010_CLion.elf"/>
 		</Unit>
+		<Unit filename="/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h">
+			<Option target="STM32L010_CLion.elf"/>
+		</Unit>
+		<Unit filename="/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h">
+			<Option target="STM32L010_CLion.elf"/>
+		</Unit>
 		<Unit filename="/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h">
 			<Option target="STM32L010_CLion.elf"/>
 		</Unit>
@@ -251,6 +254,12 @@
 			<Option target="STM32L010_CLion.elf"/>
 		</Unit>
 		<Unit filename="/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c">
+			<Option target="STM32L010_CLion.elf"/>
+		</Unit>
+		<Unit filename="/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c">
+			<Option target="STM32L010_CLion.elf"/>
+		</Unit>
+		<Unit filename="/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.c">
 			<Option target="STM32L010_CLion.elf"/>
 		</Unit>
 		<Unit filename="/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c">

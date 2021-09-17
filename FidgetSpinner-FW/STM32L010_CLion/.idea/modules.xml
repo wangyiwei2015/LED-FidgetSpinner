@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/STM32L010_CLion.iml" filepath="$PROJECT_DIR$/.idea/STM32L010_CLion.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/STM32L010_CLion2.iml" filepath="$PROJECT_DIR$/.idea/STM32L010_CLion2.iml" />
     </modules>
   </component>
 </project>
