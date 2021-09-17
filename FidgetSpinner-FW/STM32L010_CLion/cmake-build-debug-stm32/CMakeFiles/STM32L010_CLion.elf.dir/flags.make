@@ -5,13 +5,13 @@
 # compile C with /usr/local/bin/arm-none-eabi-gcc
 ASM_DEFINES = -DSTM32L010x8 -DUSE_HAL_DRIVER
 
-ASM_INCLUDES = -I/Users/wangyiwei/Documents/GitHub_repo/FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Core/Inc -I/Users/wangyiwei/Documents/GitHub_repo/FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Inc -I/Users/wangyiwei/Documents/GitHub_repo/FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I/Users/wangyiwei/Documents/GitHub_repo/FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/CMSIS/Device/ST/STM32L0xx/Include -I/Users/wangyiwei/Documents/GitHub_repo/FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/CMSIS/Include
+ASM_INCLUDES = -I/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Core/Inc -I/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Inc -I/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/CMSIS/Device/ST/STM32L0xx/Include -I/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/CMSIS/Include
 
 ASM_FLAGS = -g -mcpu=cortex-m0 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g
 
 C_DEFINES = -DSTM32L010x8 -DUSE_HAL_DRIVER
 
-C_INCLUDES = -I/Users/wangyiwei/Documents/GitHub_repo/FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Core/Inc -I/Users/wangyiwei/Documents/GitHub_repo/FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Inc -I/Users/wangyiwei/Documents/GitHub_repo/FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I/Users/wangyiwei/Documents/GitHub_repo/FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/CMSIS/Device/ST/STM32L0xx/Include -I/Users/wangyiwei/Documents/GitHub_repo/FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/CMSIS/Include
+C_INCLUDES = -I/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Core/Inc -I/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Inc -I/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/CMSIS/Device/ST/STM32L0xx/Include -I/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Drivers/CMSIS/Include
 
 C_FLAGS = -g -mcpu=cortex-m0 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g -std=gnu11
 

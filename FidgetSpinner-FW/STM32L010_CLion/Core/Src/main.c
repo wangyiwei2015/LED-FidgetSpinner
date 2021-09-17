@@ -1,33 +1,14 @@
 /* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
-  *
-  ******************************************************************************
-  */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -37,15 +18,31 @@
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 #define SET_LED(data) GPIOA->BSRR = (data & 0xff)|((~data & 0xff)<<16)
+
 #define _STATE_STILL 1
 #define _STATE_FIRSTROUND 2
 #define _STATE_RUNNING 3
+
+#define _SPACE_LINE_INTERVAL 10
+#define _SPACE_CHAR_INTERVAL 10
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-static const uint8_t CHARS[52][8] = {
+
+uint8_t mode = 0;
+//0 - Loops counter
+//1 - Timer +mm:ss
+//2 - RPM meter
+//3 - Battery |TODO:ADC
+//4 - Animation |TODO
+//5 - Random gen - yes 45 no 45 maybe 10
+//6 - User defined text
+//7 - Best score - max loops max time max speed |TODO:EEPROM
+uint8_t state = _STATE_STILL;
+
+static const uint8_t CHARS[53][8] = {
    {0b10000001,
     0b01101110,
     0b01110110,
@@ -101,132 +98,132 @@ static const uint8_t CHARS[52][8] = {
     0b11110110,
     0b11110110,
     0b11110110,
-    0b00000001},//A
+    0b00000001},//10-A
    {0b00000000,
     0b01110110,
     0b01110110,
     0b01110110,
-    0b10001001},//B
+    0b10001001},//11-B
    {0b10000001,
     0b01111110,
     0b01111110,
     0b01111110,
-    0b10111101},//C
+    0b10111101},//12-C
    {0b00000000,
     0b01111110,
     0b01111110,
     0b10111101,
-    0b11000011},//D
+    0b11000011},//13-D
    {0b00000000,
     0b01110110,
     0b01110110,
     0b01110110,
-    0b01111110},//E
+    0b01111110},//14-E
    {0b00000000,
     0b11110110,
     0b11110110,
     0b11110110,
-    0b11111110},//F
+    0b11111110},//15-F
    {0b10000001,
     0b01111110,
     0b01110110,
     0b01110110,
-    0b10000101},//G
+    0b10000101},//16-G
    {0b00000000,
     0b11110111,
     0b11110111,
     0b11110111,
-    0b00000000},//H
+    0b00000000},//17-H
    {0b11111111,
     0b01111110,
     0b00000000,
     0b01111110,
-    0b11111111},//I
+    0b11111111},//18-I
    {0b11111110,
     0b01111110,
     0b01111110,
     0b10000000,
-    0b11111110},//J
+    0b11111110},//19-J
    {0b00000000,
     0b11110111,
     0b11101011,
     0b11011101,
-    0b00111110},//K
+    0b00111110},//20-K
    {0b00000000,
     0b01111111,
     0b01111111,
     0b01111111,
-    0b01111111},//L
+    0b01111111},//21-L
    {0b00000000,
     0b11111110,
     0b11000000,
     0b11111110,
-    0b00000001},//M
+    0b00000001},//22-M
    {0b00000000,
     0b11111110,
     0b10000001,
     0b01111111,
-    0b00000000},//N
+    0b00000000},//23-N
    {0b10000001,
     0b01111110,
     0b01111110,
     0b01111110,
-    0b10000001},//O
+    0b10000001},//24-O
    {0b00000000,
     0b11110110,
     0b11110110,
     0b11110110,
-    0b11111001},//P
+    0b11111001},//25-P
    {0b10000001,
     0b01111110,
     0b01011110,
     0b10111110,
-    0b01000001},//Q
+    0b01000001},//26-Q
    {0b00000000,
     0b11110110,
     0b11100110,
     0b11010110,
-    0b00111001},//R
+    0b00111001},//27-R
    {0b10111001,
     0b01110110,
     0b01110110,
     0b01110110,
-    0b10001101},//S
+    0b10001101},//28-S
    {0b11111110,
     0b11111110,
     0b00000000,
     0b11111110,
-    0b11111110},//T
+    0b11111110},//29-T
    {0b10000000,
     0b01111111,
     0b01111111,
     0b01111111,
-    0b10000000},//U
+    0b10000000},//30-U
    {0b11100000,
     0b10011111,
     0b01111111,
     0b10011111,
-    0b11100000},//V
+    0b11100000},//31-V
    {0b10000000,
     0b01111111,
     0b10000111,
     0b01111111,
-    0b10000000},//W
+    0b10000000},//32-W
    {0b00011100,
     0b11101011,
     0b11110111,
     0b11101011,
-    0b00011100},//X
+    0b00011100},//33-X
    {0b11111100,
     0b11110011,
     0b00001111,
     0b11110011,
-    0b11111100},//Y
+    0b11111100},//34-Y
    {0b00111110,
     0b01010110,
     0b01100110,
     0b01101010,
-    0b01111100},//Z
+    0b01111100},//35-Z
    {0b11101111,
     0b11010111,
     0b10111011,
@@ -297,29 +294,22 @@ static const uint8_t CHARS[52][8] = {
     0b10000011,
     0b10000011,
     0b11000111},//49 cdot
-   {0b11100111,
-    0b11000011,
-    0b10000111,
-    0b11000011,
-    0b11100111},//50 heart
+   {0b10111011,
+    0b11011111,
+    0b11101111,
+    0b11110111,
+    0b10111011},//50 %
    {0b11011011,
     0b10110101,
     0b00000000,
     0b10101101,
     0b11011011},//51 $
+   {0b11111111,
+    0b11111111,
+    0b11111111,
+    0b11111111,
+    0b11111111},//52 _space_
 };
-
-uint8_t mode = 0;
-//0 - Loops counter
-//1 - Timer +mm:ss
-//2 - RPM meter
-//3 - Battery |TODO:ADC
-//4 - Animation |TODO
-//5 - Random gen - yes 45 no 45 maybe 10
-//6 - User defined text
-//7 - Best score - max loops max time max speed |TODO:EEPROM
-uint8_t state = _STATE_STILL;
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -341,6 +331,22 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
         SET_LED(4 + ttt);
     }
 }
+
+/**
+  * @brief  Displays the string on LEDs.
+  * @param  str: character index array
+  * @retval None
+  */
+void showText(const uint8_t str[]) {
+    for(unsigned character=0; character<sizeof(*str); ++character) {
+        for(uint8_t line=0; line<8; ++line) {
+            SET_LED(CHARS[str[character]][line]);
+            HAL_Delay(_SPACE_LINE_INTERVAL); //Pixel line width
+        }
+        HAL_Delay(_SPACE_CHAR_INTERVAL); //Char spacing width
+    }
+}
+//example: str = [0,6,4,52,27,25,22] -> "064 RPM"
 
 //void SysTick_Handler() {
     //
@@ -385,14 +391,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  //SET_LED(0b01010101);
-  //while(1);
-
-  while(1)
-  {
-      ttt = ~ttt;
-      SET_LED(ttt);
-      HAL_Delay(1000); //in ms
+  while(1) {
     /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
   }

@@ -67,10 +67,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/wangyiwei/Documents/GitHub_repo/FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion
+CMAKE_SOURCE_DIR = /Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/wangyiwei/Documents/GitHub_repo/FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/cmake-build-debug-stm32
+CMAKE_BINARY_DIR = /Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/cmake-build-debug-stm32
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wangyiwei/Documents/GitHub_repo/FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/cmake-build-debug-stm32/CMakeFiles /Users/wangyiwei/Documents/GitHub_repo/FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/cmake-build-debug-stm32//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/cmake-build-debug-stm32/CMakeFiles /Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/cmake-build-debug-stm32//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wangyiwei/Documents/GitHub_repo/FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/cmake-build-debug-stm32/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/cmake-build-debug-stm32/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
