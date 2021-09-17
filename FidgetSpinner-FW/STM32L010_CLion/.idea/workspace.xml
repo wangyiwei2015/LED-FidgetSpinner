@@ -12,23 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88f10ed7-449d-4950-a953-0e5af46f40b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mxproject" beforeDir="false" afterPath="$PROJECT_DIR$/.mxproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/stm32l0xx_hal_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32l0xx_hal_conf.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/stm32l0xx_hal_msp.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32l0xx_hal_msp.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STM32L010_CLion.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/STM32L010_CLion.ioc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.elf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.map" afterDir="false" />
-    </list>
+    <list default="true" id="88f10ed7-449d-4950-a953-0e5af46f40b3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +69,7 @@
       <workItem from="1630749875860" duration="1279000" />
       <workItem from="1631613637126" duration="5804000" />
       <workItem from="1631708452069" duration="9385000" />
-      <workItem from="1631864313982" duration="1090000" />
+      <workItem from="1631864313982" duration="1111000" />
     </task>
     <servers />
   </component>

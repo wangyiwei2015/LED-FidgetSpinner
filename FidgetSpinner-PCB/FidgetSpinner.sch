@@ -936,7 +936,6 @@ NoConn ~ 2900 4550
 NoConn ~ 2900 4650
 NoConn ~ 3900 4550
 NoConn ~ 3900 4350
-NoConn ~ 3900 4250
 Text GLabel 2900 1400 0    50   BiDi ~ 0
 VBAT
 $Comp
@@ -983,6 +982,8 @@ $EndComp
 Wire Wire Line
 	9550 1400 9550 1300
 Connection ~ 9550 1400
-Text GLabel 2500 4250 0    50   BiDi ~ 0
+Text GLabel 4050 4250 2    50   BiDi ~ 0
 VBAT
+Wire Wire Line
+	3900 4250 4050 4250
 $EndSCHEMATC

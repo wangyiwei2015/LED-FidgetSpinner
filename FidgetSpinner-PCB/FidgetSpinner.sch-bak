@@ -983,4 +983,6 @@ $EndComp
 Wire Wire Line
 	9550 1400 9550 1300
 Connection ~ 9550 1400
+Text GLabel 2500 4250 0    50   BiDi ~ 0
+VBAT
 $EndSCHEMATC
