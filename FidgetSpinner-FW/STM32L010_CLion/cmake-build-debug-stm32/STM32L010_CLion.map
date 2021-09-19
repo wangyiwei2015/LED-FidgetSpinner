@@ -1074,7 +1074,6 @@ LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-
                 0x0000000008001514                showChar
  .text.displayInMode
                 0x0000000008001614      0x2a0 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
-                0x0000000008001614                displayInMode
  .text.HAL_GPIO_EXTI_Callback
                 0x00000000080018b4       0xf0 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
                 0x00000000080018b4                HAL_GPIO_EXTI_Callback

@@ -356,23 +356,19 @@ void showChar(const uint8_t id) {
 }
 //example: str = [0,6,4,52,27,25,22] -> "064 RPM"
 
-void displayInMode(uint8_t _mode) {
+static inline void displayInMode(uint8_t _mode) {
     switch(_mode) {
         case 0: //0 - Loops counter
             showChar(49);
             showChar(52);
-            if(loopCount >= 10000) {
+            if(loopCount >= 10000)
                 showChar((uint8_t)(loopCount / 10000));
-            }
-            if(loopCount >= 1000) {
+            if(loopCount >= 1000)
                 showChar((uint8_t)((loopCount % 10000) / 1000));
-            }
-            if(loopCount >= 100) {
+            if(loopCount >= 100)
                 showChar((uint8_t)((loopCount % 1000) / 100));
-            }
-            if(loopCount >= 10) {
+            if(loopCount >= 10)
                 showChar((uint8_t)(loopCount / 10));
-            }
             showChar(loopCount % 10);
             break;
         case 1: //1 - Timer +mm:ss
@@ -398,15 +394,12 @@ void displayInMode(uint8_t _mode) {
                 showChar(28); //S
                 showChar(29); //T
             }
-            if(speedRpm >= 1000) {
+            if(speedRpm >= 1000)
                 showChar((uint8_t)(speedRpm / 1000));
-            }
-            if(speedRpm >= 100) {
+            if(speedRpm >= 100)
                 showChar((uint8_t)((speedRpm % 1000) / 100));
-            }
-            if(speedRpm >= 10) {
+            if(speedRpm >= 10)
                 showChar((uint8_t)(speedRpm / 10));
-            }
             showChar(speedRpm % 10);
             showChar(52); //_spacer_
             showChar(27); //R

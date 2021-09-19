@@ -13,18 +13,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbab952c-b0a1-4035-847b-0545e2493ae2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/OCD_STM32L010_CLion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/OCD_STM32L010_CLion.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/ASM.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/ASM.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.elf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.hex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb-bak" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb-bak" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1631892889433</updated>
       <workItem from="1631892911137" duration="8000" />
-      <workItem from="1631892931750" duration="8237000" />
+      <workItem from="1631892931750" duration="9212000" />
     </task>
     <servers />
   </component>

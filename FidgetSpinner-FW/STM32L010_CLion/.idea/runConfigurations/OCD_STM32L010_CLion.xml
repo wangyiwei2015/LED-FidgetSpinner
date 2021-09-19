@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration name="OCD STM32L010_CLion" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32L010_CLion" TARGET_NAME="STM32L010_CLion.elf" version="1" RUN_TARGET_PROJECT_NAME="STM32L010_CLion" RUN_TARGET_NAME="STM32L010_CLion.elf">
+  <configuration default="false" name="OCD STM32L010_CLion" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STM32L010_CLion" TARGET_NAME="STM32L010_CLion.elf" CONFIG_NAME="Debug-STM32" version="1" RUN_TARGET_PROJECT_NAME="STM32L010_CLion" RUN_TARGET_NAME="STM32L010_CLion.elf">
     <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="$PROJECT_DIR$/stm32ldiscovery.cfg" reset-type="INIT" download-type="UPDATED_ONLY">
       <debugger kind="GDB" isBundled="true" />
     </openocd>
