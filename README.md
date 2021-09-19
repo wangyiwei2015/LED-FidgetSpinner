@@ -1,9 +1,11 @@
 # LED-FidgetSpinner
-Battery-powered LED Fidget Spinner
-
-
+Battery-powered LED Fidget Spinner.
 
 **PhOVS**
+
+
+
+Design & concept reference: *8Mode Fidget Spinner*
 
 
 
@@ -20,6 +22,8 @@ Warning: this is still under development and is far from production.
 **Regulator** - BL8530-30
 
 ...
+
+0805 Diodes, resistors, and capacitors.
 
 
 
