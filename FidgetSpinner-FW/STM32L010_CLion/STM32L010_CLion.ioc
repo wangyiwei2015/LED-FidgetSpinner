@@ -1,4 +1,9 @@
 #MicroXplorer Configuration settings - do not modify
+ADC.DiscontinuousConvMode=ENABLE
+ADC.IPParameters=Resolution,DiscontinuousConvMode,Overrun,LowPowerAutoPowerOff
+ADC.LowPowerAutoPowerOff=ENABLE
+ADC.Overrun=ADC_OVR_DATA_OVERWRITTEN
+ADC.Resolution=ADC_RESOLUTION_8B
 File.Version=6
 GPIO.groupedBy=
 KeepUserPlacement=false

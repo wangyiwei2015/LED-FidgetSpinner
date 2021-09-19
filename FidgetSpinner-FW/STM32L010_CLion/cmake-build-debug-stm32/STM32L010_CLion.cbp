@@ -94,6 +94,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Core/.DS_Store">
+			<Option target="STM32L010_CLion.elf"/>
+		</Unit>
 		<Unit filename="/Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion/Core/Inc/main.h">
 			<Option target="STM32L010_CLion.elf"/>
 		</Unit>
