@@ -18,31 +18,20 @@
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 #define SET_LED(data) GPIOA->BSRR = (data & 0xff)|((~data & 0xff)<<16)
+#define SHOW_MODE SET_LED(~(0b10000000 >> mode))
 
 #define _STATE_STILL 1
 #define _STATE_FIRSTROUND 2
 #define _STATE_RUNNING 3
 
 #define _SPACE_LINE_INTERVAL 10
-#define _SPACE_CHAR_INTERVAL 10
+#define _SPACE_CHAR_INTERVAL 40
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc;
 
 /* USER CODE BEGIN PV */
-
-uint8_t mode = 0;
-//0 - Loops counter
-//1 - Timer +mm:ss
-//2 - RPM meter
-//3 - Battery |TODO:ADC
-//4 - Animation |TODO
-//5 - Random gen - yes 45 no 45 maybe 10
-//6 - User defined text
-//7 - Best score - max loops max time max speed |TODO:EEPROM
-uint8_t state = _STATE_STILL;
-
 static const uint8_t CHARS[53][8] = {
    {0b10000001,
     0b01101110,
@@ -249,7 +238,7 @@ static const uint8_t CHARS[53][8] = {
     0b11111110,
     0b01001110,
     0b11110110,
-    0b11111001},//40 ?
+    0b11111001},//40 ? |TODO
    {0b11110111,
     0b11110111,
     0b11110111,
@@ -309,8 +298,23 @@ static const uint8_t CHARS[53][8] = {
     0b11111111,
     0b11111111,
     0b11111111,
-    0b11111111},//52 _space_
+    0b11111111},//52 _spacer_
 };
+
+//Runtime - State
+uint8_t mode = 0;
+uint8_t state = _STATE_STILL;
+//Runtime - SysTick
+uint32_t prevTick = 0;
+uint32_t loopTime = 0;
+uint32_t spinStartTime = 0;
+//Runtime - User
+uint16_t speedRpm = 0;
+uint16_t maxSpeedRpm = 0;
+uint16_t loopCount = 0;
+//Runtime - User - 2
+uint8_t animationIndex = 0;
+#define ANI_INDEX_MAX 5
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -318,37 +322,184 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_ADC_Init(void);
 /* USER CODE BEGIN PFP */
-
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
-uint8_t ttt = 0;
-
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
-    if(GPIO_Pin == GPIO_PIN_11) {
-        SET_LED(2 + ttt);
-    } else if(GPIO_Pin == GPIO_PIN_12) {
-        SET_LED(4 + ttt);
-    }
-}
-
-/**
-  * @brief  Displays the string on LEDs.
-  * @param  str: character index array
-  * @retval None
-  */
-void showText(const uint8_t str[]) {
-    for(unsigned character=0; character<sizeof(*str); ++character) {
-        for(uint8_t line=0; line<8; ++line) {
-            SET_LED(CHARS[str[character]][line]);
-            HAL_Delay(_SPACE_LINE_INTERVAL); //Pixel line width
-        }
-        HAL_Delay(_SPACE_CHAR_INTERVAL); //Char spacing width
-    }
+void showChar(const uint8_t id) {
+    //for(unsigned character=0; character<sizeof(*str); ++character) {
+    double intervalScale = loopTime;
+    intervalScale /= 1024;
+//    for(uint8_t line=0; line<8; ++line) {
+//        SET_LED(CHARS[str][line]);
+//        HAL_Delay(intervalScale * _SPACE_LINE_INTERVAL); //Pixel line width
+//    }
+    const uint32_t lineInterval = intervalScale * _SPACE_LINE_INTERVAL;
+    SET_LED(CHARS[id][0]);
+    HAL_Delay(lineInterval);
+    SET_LED(CHARS[id][1]);
+    HAL_Delay(lineInterval);
+    SET_LED(CHARS[id][2]);
+    HAL_Delay(lineInterval);
+    SET_LED(CHARS[id][3]);
+    HAL_Delay(lineInterval);
+    SET_LED(CHARS[id][4]);
+    HAL_Delay(lineInterval);
+    SET_LED(CHARS[id][5]);
+    HAL_Delay(lineInterval);
+    SET_LED(CHARS[id][6]);
+    HAL_Delay(lineInterval);
+    SET_LED(CHARS[id][7]);
+    HAL_Delay(lineInterval);
+    SET_LED(0xff);
+    HAL_Delay(intervalScale * _SPACE_CHAR_INTERVAL); //Char spacing width
 }
 //example: str = [0,6,4,52,27,25,22] -> "064 RPM"
+
+void displayInMode(uint8_t _mode) {
+    switch(_mode) {
+        case 0: //0 - Loops counter
+            showChar(49);
+            showChar(52);
+            if(loopCount >= 10000) {
+                showChar((uint8_t)(loopCount / 10000));
+            }
+            if(loopCount >= 1000) {
+                showChar((uint8_t)((loopCount % 10000) / 1000));
+            }
+            if(loopCount >= 100) {
+                showChar((uint8_t)((loopCount % 1000) / 100));
+            }
+            if(loopCount >= 10) {
+                showChar((uint8_t)(loopCount / 10));
+            }
+            showChar(loopCount % 10);
+            break;
+        case 1: //1 - Timer +mm:ss
+            __NOP();
+            const uint32_t _spinTime = (prevTick - spinStartTime) / 1000;
+            const uint8_t _sec = (uint8_t)(_spinTime % 60);
+            const uint8_t _min = (uint8_t)(_spinTime / 60);
+            showChar(43); //+
+            showChar(_min / 10);
+            showChar(_min % 10);
+            showChar(45); //:
+            showChar(_sec / 10);
+            showChar(_sec % 10);
+            break;
+        case 2: //2 - RPM meter
+            if(speedRpm >= 10000) {
+                showChar(29); //T
+                showChar(24); //O
+                showChar(24); //O
+                showChar(52); //_spacer_
+                showChar(15); //F
+                showChar(10); //A
+                showChar(28); //S
+                showChar(29); //T
+            }
+            if(speedRpm >= 1000) {
+                showChar((uint8_t)(speedRpm / 1000));
+            }
+            if(speedRpm >= 100) {
+                showChar((uint8_t)((speedRpm % 1000) / 100));
+            }
+            if(speedRpm >= 10) {
+                showChar((uint8_t)(speedRpm / 10));
+            }
+            showChar(speedRpm % 10);
+            showChar(52); //_spacer_
+            showChar(27); //R
+            showChar(25); //P
+            showChar(22); //M
+            break;
+        case 3: //3 - Battery |TODO:ADC
+            //
+            break;
+        case 4: //4 - Animation |TODO
+            //
+            break;
+        case 5: //5 - Random gen - yes / no / maybe
+            if(prevTick - spinStartTime < 1280) {
+                showChar(34); //Y
+                showChar(14); //E
+                showChar(28); //S
+                showChar(52); //_SPACER_
+                showChar(24); //O
+                showChar(27); //R
+                showChar(52); //_SPACER_
+                showChar(23); //N
+                showChar(24); //O
+                showChar(52); //_SPACER_
+                showChar(39); //?
+            } else {
+                uint8_t rnd = prevTick % 16;
+                if (rnd < 7) {
+                    showChar(49); //_cdot_
+                    showChar(34); //Y
+                    showChar(14); //E
+                    showChar(28); //S
+                } else if (rnd < 14) {
+                    showChar(49); //_cdot_
+                    showChar(23); //N
+                    showChar(24); //O
+                } else {
+                    showChar(49); //_cdot_
+                    showChar(22); //M
+                    showChar(10); //A
+                    showChar(34); //Y
+                    showChar(11); //B
+                    showChar(14); //E
+                }
+            }
+            break;
+        case 6: //6 - User defined text
+            //
+            break;
+        case 7: //7 - Best score - max loops max time max speed |TODO:EEPROM
+            //
+            break;
+        default:
+            break;
+    }
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+    if(GPIO_Pin == GPIO_PIN_11) { //Button
+        if(state == _STATE_STILL) {
+            ++mode;
+            if(mode > 7) mode = 0;
+            SHOW_MODE;
+        }
+    } else if(GPIO_Pin == GPIO_PIN_12) { //Sensor
+        const uint32_t tick = HAL_GetTick();
+        switch(state) {
+            case _STATE_STILL:
+                SET_LED(0xff);
+                state = _STATE_FIRSTROUND;
+                prevTick = tick;
+                break;
+            case _STATE_FIRSTROUND:
+                state = _STATE_RUNNING;
+                loopTime = tick - prevTick;
+                prevTick = tick;
+                spinStartTime = tick;
+                loopCount = 1;
+                break;
+            case _STATE_RUNNING:
+                prevTick = tick;
+                //loopTime in ms
+                loopTime = (loopTime >> 4) + ((tick - prevTick) >> 4) * 3;
+                ++loopCount;
+                speedRpm = 60000 / loopTime;
+                if(speedRpm > maxSpeedRpm) maxSpeedRpm = speedRpm;
+                displayInMode(mode);
+                break;
+            default:
+                break;
+        }
+    }
+}
 
 //void SysTick_Handler() {
     //
@@ -395,6 +546,18 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
   while(1) {
+      if(state != _STATE_STILL) {
+          //Timeout watchdog
+          if(HAL_GetTick() - prevTick > 1024) {
+              state = _STATE_STILL;
+              SHOW_MODE;
+              //TODO: save max data
+              loopCount;
+              maxSpeedRpm;
+              ++animationIndex;
+              if(animationIndex >= ANI_INDEX_MAX) animationIndex = 0;
+          }
+      }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
