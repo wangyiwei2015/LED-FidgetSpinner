@@ -135,13 +135,17 @@ void saveEEPData(uint32_t new) {
 
 uint8_t readBatteryADC() {
     shouldHandleEXTI = 0;
-    uint8_t result = 0;
+    uint16_t adcResult = 0; //10-bit 1024
     HAL_ADC_Start(&hadc);
     HAL_ADC_PollForConversion(&hadc, _ADC_TIMEOUT);
     if(HAL_IS_BIT_SET(HAL_ADC_GetState(&hadc), HAL_ADC_STATE_REG_EOC))
-        result = HAL_ADC_GetValue(&hadc);
+        adcResult = HAL_ADC_GetValue(&hadc);
+    else return 0;
+    //adcResult * 3 / 1024 * 180 - 440
+    double percentage = ((double)adcResult * 0.52734 - 440.0);
+    if(percentage < 10) percentage = 1;
     shouldHandleEXTI = 1;
-    return result;
+    return (uint8_t)percentage;
 }
 
 void showChar(const uint8_t id) {
@@ -224,8 +228,30 @@ static inline void displayInMode(uint8_t _mode) {
             showChar(25); //P
             showChar(22); //M
             break;
-        case 3: //3 - Battery |TODO:ADC
-            //
+        case 3: //3 - Battery
+            __NOP();
+            const uint8_t bat = readBatteryADC();
+            if(bat > 99) { //100%
+                showChar(1);
+                showChar(0);
+                showChar(0);
+                showChar(50);
+            } else if(bat > 9) { //2-Digit
+                showChar(bat / 10);
+                showChar(bat % 10);
+                showChar(50);
+            } else if(bat) { //LOW!
+                showChar(21);
+                showChar(24);
+                showChar(32);
+                showChar(38);
+            } else { //ERROR
+                showChar(14);
+                showChar(27);
+                showChar(27);
+                showChar(24);
+                showChar(27);
+            }
             break;
         case 4: //4 - Animation |TODO
             //
@@ -264,11 +290,39 @@ static inline void displayInMode(uint8_t _mode) {
                 }
             }
             break;
-        case 6: //6 - User defined text
+        case 6: //6 - User defined text |TODO
             //
             break;
-        case 7: //7 - Best score - max loops max time max speed |TODO:EEPROM
-            //
+        case 7: //7 - Best score - max loops max time max speed
+            showChar(11); //B
+            showChar(14); //E
+            showChar(28); //S
+            showChar(29); //T
+            showChar(45); //:
+            if(((prevTick - spinStartTime) << 11) % 2) {
+                if(maxLoopCount >= 10000)
+                    showChar((uint8_t)(maxLoopCount / 10000));
+                if(maxLoopCount >= 1000)
+                    showChar((uint8_t)((maxLoopCount % 10000) / 1000));
+                if(maxLoopCount >= 100)
+                    showChar((uint8_t)((maxLoopCount % 1000) / 100));
+                if(maxLoopCount >= 10)
+                    showChar((uint8_t)(maxLoopCount / 10));
+                showChar(maxLoopCount % 10);
+                showChar(49); //_cdot_
+            } else {
+                if(maxSpeedRpm >= 1000)
+                    showChar((uint8_t)((maxSpeedRpm % 10000) / 1000));
+                if(maxSpeedRpm >= 100)
+                    showChar((uint8_t)((maxSpeedRpm % 1000) / 100));
+                if(maxSpeedRpm >= 10)
+                    showChar((uint8_t)(maxSpeedRpm / 10));
+                showChar(maxSpeedRpm % 10);
+                showChar(52); //_spacer_
+                showChar(27); //R
+                showChar(25); //P
+                showChar(22); //M
+            }
             break;
         default:
             break;
@@ -354,7 +408,7 @@ int main(void)
     uint8_t adcv = 0;
     while(1) {
         adcv = readBatteryADC();
-        switch(adcv << 5) {
+        switch(adcv / 10) {
             case 0:SET_LED(0b11111110);
             case 1:SET_LED(0b11111100);
             case 2:SET_LED(0b11111000);
@@ -454,7 +508,7 @@ static void MX_ADC_Init(void)
   hadc.Instance = ADC1;
   hadc.Init.OversamplingMode = DISABLE;
   hadc.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV1;
-  hadc.Init.Resolution = ADC_RESOLUTION_8B;
+  hadc.Init.Resolution = ADC_RESOLUTION_10B;
   hadc.Init.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
   hadc.Init.ScanConvMode = ADC_SCAN_DIRECTION_FORWARD;
   hadc.Init.DataAlign = ADC_DATAALIGN_RIGHT;
