@@ -24,8 +24,10 @@
 #define _STATE_FIRSTROUND 2
 #define _STATE_RUNNING 3
 
+//Parameters
 #define _SPACE_LINE_INTERVAL 10
 #define _SPACE_CHAR_INTERVAL 40
+#define _ADC_TIMEOUT 50
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -91,6 +93,7 @@ static const uint8_t CHARS[53][8] = {
 //Runtime - State
 uint8_t mode = 0;
 uint8_t state = _STATE_STILL;
+uint8_t shouldHandleEXTI = 1;
 //Runtime - SysTick
 uint32_t prevTick = 0;
 uint32_t loopTime = 0;
@@ -99,6 +102,8 @@ uint32_t spinStartTime = 0;
 uint16_t speedRpm = 0;
 uint16_t maxSpeedRpm = 0;
 uint16_t loopCount = 0;
+uint16_t maxLoopCount = 0;
+uint8_t eepDataOffset = 0;
 //Runtime - User - 2
 uint8_t animationIndex = 0;
 #define ANI_INDEX_MAX 5
@@ -113,6 +118,32 @@ static void MX_ADC_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+uint32_t loadEEPData() {
+    return (*(__IO uint32_t*)(DATA_EEPROM_BASE + 1 + eepDataOffset));
+}
+//[31:16] max speed
+//[15:00] max loops
+void saveEEPData(uint32_t new) {
+    shouldHandleEXTI = 0;
+    HAL_DATA_EEPROMEx_Unlock();
+    HAL_DATA_EEPROMEx_Program(
+        FLASH_TYPEPROGRAMDATA_WORD,
+        DATA_EEPROM_BASE + 1 + eepDataOffset,
+        new);
+    shouldHandleEXTI = 1;
+}
+
+uint8_t readBatteryADC() {
+    shouldHandleEXTI = 0;
+    uint8_t result = 0;
+    HAL_ADC_Start(&hadc);
+    HAL_ADC_PollForConversion(&hadc, _ADC_TIMEOUT);
+    if(HAL_IS_BIT_SET(HAL_ADC_GetState(&hadc), HAL_ADC_STATE_REG_EOC))
+        result = HAL_ADC_GetValue(&hadc);
+    shouldHandleEXTI = 1;
+    return result;
+}
+
 void showChar(const uint8_t id) {
     //for(unsigned character=0; character<sizeof(*str); ++character) {
     double intervalScale = loopTime;
@@ -245,6 +276,7 @@ static inline void displayInMode(uint8_t _mode) {
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+    if(!shouldHandleEXTI) return;
     if(GPIO_Pin == GPIO_PIN_11) { //Button
         if(state == _STATE_STILL) {
             ++mode;
@@ -272,7 +304,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
                 loopTime = (loopTime >> 4) + ((tick - prevTick) >> 4) * 3;
                 ++loopCount;
                 speedRpm = 60000 / loopTime;
-                if(speedRpm > maxSpeedRpm) maxSpeedRpm = speedRpm;
                 displayInMode(mode);
                 break;
             default:
@@ -293,7 +324,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -302,24 +332,40 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
 
   /* Configure the system clock */
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+    uint8_t savedOffset = *(__IO uint8_t*)(DATA_EEPROM_BASE);
+    eepDataOffset = savedOffset;
+    uint32_t savedData = 0;
+    savedData = loadEEPData();
+    maxSpeedRpm = savedData >> 16;
+    maxLoopCount = savedData % (1 << 16);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_ADC_Init();
   /* USER CODE BEGIN 2 */
-
-    //SysTick_Config(32000); //32kHz, 1s
-    //
-
+    //TODO: Debug test
+    uint8_t adcv = 0;
+    while(1) {
+        adcv = readBatteryADC();
+        switch(adcv << 5) {
+            case 0:SET_LED(0b11111110);
+            case 1:SET_LED(0b11111100);
+            case 2:SET_LED(0b11111000);
+            case 3:SET_LED(0b11110000);
+            case 4:SET_LED(0b11100000);
+            case 5:SET_LED(0b11000000);
+            case 6:SET_LED(0b10000000);
+            case 7:SET_LED(0b00000000);
+        }
+        HAL_Delay(200);
+    }
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -331,9 +377,11 @@ int main(void)
           if(HAL_GetTick() - prevTick > 1024) {
               state = _STATE_STILL;
               SHOW_MODE;
-              //TODO: save max data
-              loopCount;
-              maxSpeedRpm;
+              if(speedRpm > maxSpeedRpm || loopCount > maxLoopCount) {
+                  maxSpeedRpm = speedRpm;
+                  maxLoopCount = loopCount;
+                  saveEEPData((((uint32_t)maxSpeedRpm) << 16) + maxLoopCount);
+              }
               ++animationIndex;
               if(animationIndex >= ANI_INDEX_MAX) animationIndex = 0;
           }

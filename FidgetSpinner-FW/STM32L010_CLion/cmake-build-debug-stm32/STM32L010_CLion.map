@@ -70,6 +70,10 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+ .text.saveEEPData
+                0x0000000000000000       0x10 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+ .bss.animationIndex
+                0x0000000000000000        0x1 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
@@ -182,26 +186,18 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .text.ADC_DelayMicroSecond
-                0x0000000000000000       0x30 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .text.ADC_ConversionStop
                 0x0000000000000000       0x5c CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .text.ADC_Disable
                 0x0000000000000000       0x82 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .text.ADC_Enable
-                0x0000000000000000       0x80 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .text.HAL_ADC_MspInit
                 0x0000000000000000        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .text.HAL_ADC_MspDeInit
                 0x0000000000000000        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .text.HAL_ADC_DeInit
                 0x0000000000000000       0xb8 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .text.HAL_ADC_Start
-                0x0000000000000000       0x60 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .text.HAL_ADC_Stop
                 0x0000000000000000       0x44 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .text.HAL_ADC_PollForConversion
-                0x0000000000000000       0xcc CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .text.HAL_ADC_PollForEvent
                 0x0000000000000000       0x7e CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .text.HAL_ADC_Start_IT
@@ -212,8 +208,6 @@ Discarded input sections
                 0x0000000000000000       0xa4 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .text.HAL_ADC_Stop_DMA
                 0x0000000000000000       0x84 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .text.HAL_ADC_GetValue
-                0x0000000000000000        0x6 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .text.HAL_ADC_ConvCpltCallback
                 0x0000000000000000        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .text.ADC_DMAConvCplt
@@ -232,8 +226,6 @@ Discarded input sections
                 0x0000000000000000       0xe4 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .text.HAL_ADC_AnalogWDGConfig
                 0x0000000000000000       0xa8 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .text.HAL_ADC_GetState
-                0x0000000000000000        0x4 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .text.HAL_ADC_GetError
                 0x0000000000000000        0x4 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.c.obj
@@ -1015,7 +1007,7 @@ LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-
                 0x0000000008000000                g_pfnVectors
                 0x00000000080000c0                . = ALIGN (0x4)
 
-.text           0x00000000080000c0     0x2ab4
+.text           0x00000000080000c0     0x2d1c
                 0x00000000080000c0                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080000c0       0x48 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
@@ -1069,231 +1061,258 @@ LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-
  *(.text*)
  .text.MX_GPIO_Init
                 0x0000000008001430       0xe4 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+ .text.loadEEPData
+                0x0000000008001514       0x10 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x0000000008001514                loadEEPData
+ .text.readBatteryADC
+                0x0000000008001524       0x40 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x0000000008001524                readBatteryADC
  .text.showChar
-                0x0000000008001514      0x100 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
-                0x0000000008001514                showChar
+                0x0000000008001564      0x100 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x0000000008001564                showChar
  .text.displayInMode
-                0x0000000008001614      0x2a0 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x0000000008001664      0x2a0 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
  .text.HAL_GPIO_EXTI_Callback
-                0x00000000080018b4       0xf0 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
-                0x00000000080018b4                HAL_GPIO_EXTI_Callback
+                0x0000000008001904       0xe8 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x0000000008001904                HAL_GPIO_EXTI_Callback
  .text.Error_Handler
-                0x00000000080019a4        0x4 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
-                0x00000000080019a4                Error_Handler
+                0x00000000080019ec        0x4 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x00000000080019ec                Error_Handler
  .text.MX_ADC_Init
-                0x00000000080019a8       0x80 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x00000000080019f0       0x88 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
  .text.SystemClock_Config
-                0x0000000008001a28       0x74 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
-                0x0000000008001a28                SystemClock_Config
- .text.main     0x0000000008001a9c       0x74 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
-                0x0000000008001a9c                main
+                0x0000000008001a78       0x74 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x0000000008001a78                SystemClock_Config
+ .text.main     0x0000000008001aec       0xa4 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x0000000008001aec                main
  .text.HAL_MspInit
-                0x0000000008001b10       0x1c CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
-                0x0000000008001b10                HAL_MspInit
+                0x0000000008001b90       0x1c CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
+                0x0000000008001b90                HAL_MspInit
  .text.HAL_ADC_MspInit
-                0x0000000008001b2c       0x54 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
-                0x0000000008001b2c                HAL_ADC_MspInit
+                0x0000000008001bac       0x54 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
+                0x0000000008001bac                HAL_ADC_MspInit
  .text.NMI_Handler
-                0x0000000008001b80        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
-                0x0000000008001b80                NMI_Handler
+                0x0000000008001c00        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
+                0x0000000008001c00                NMI_Handler
  .text.HardFault_Handler
-                0x0000000008001b82        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
-                0x0000000008001b82                HardFault_Handler
+                0x0000000008001c02        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
+                0x0000000008001c02                HardFault_Handler
  .text.SVC_Handler
-                0x0000000008001b84        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
-                0x0000000008001b84                SVC_Handler
+                0x0000000008001c04        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
+                0x0000000008001c04                SVC_Handler
  .text.PendSV_Handler
-                0x0000000008001b86        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
-                0x0000000008001b86                PendSV_Handler
+                0x0000000008001c06        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
+                0x0000000008001c06                PendSV_Handler
  .text.SysTick_Handler
-                0x0000000008001b88        0x8 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
-                0x0000000008001b88                SysTick_Handler
+                0x0000000008001c08        0x8 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
+                0x0000000008001c08                SysTick_Handler
  .text.EXTI4_15_IRQHandler
-                0x0000000008001b90       0x14 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
-                0x0000000008001b90                EXTI4_15_IRQHandler
+                0x0000000008001c10       0x14 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
+                0x0000000008001c10                EXTI4_15_IRQHandler
  .text.SystemInit
-                0x0000000008001ba4        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
-                0x0000000008001ba4                SystemInit
- *fill*         0x0000000008001ba6        0x2 
+                0x0000000008001c24        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
+                0x0000000008001c24                SystemInit
+ *fill*         0x0000000008001c26        0x2 
  .text.HAL_InitTick
-                0x0000000008001ba8       0x50 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
-                0x0000000008001ba8                HAL_InitTick
+                0x0000000008001c28       0x50 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+                0x0000000008001c28                HAL_InitTick
  .text.HAL_Init
-                0x0000000008001bf8       0x28 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
-                0x0000000008001bf8                HAL_Init
+                0x0000000008001c78       0x28 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+                0x0000000008001c78                HAL_Init
  .text.HAL_IncTick
-                0x0000000008001c20       0x18 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
-                0x0000000008001c20                HAL_IncTick
+                0x0000000008001ca0       0x18 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+                0x0000000008001ca0                HAL_IncTick
  .text.HAL_GetTick
-                0x0000000008001c38        0xc CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
-                0x0000000008001c38                HAL_GetTick
+                0x0000000008001cb8        0xc CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+                0x0000000008001cb8                HAL_GetTick
  .text.HAL_Delay
-                0x0000000008001c44       0x24 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
-                0x0000000008001c44                HAL_Delay
+                0x0000000008001cc4       0x24 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+                0x0000000008001cc4                HAL_Delay
+ .text.ADC_DelayMicroSecond
+                0x0000000008001ce8       0x30 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+ .text.ADC_Enable
+                0x0000000008001d18       0x80 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .text.HAL_ADC_Init
-                0x0000000008001c68      0x1ec CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
-                0x0000000008001c68                HAL_ADC_Init
+                0x0000000008001d98      0x1ec CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+                0x0000000008001d98                HAL_ADC_Init
+ .text.HAL_ADC_Start
+                0x0000000008001f84       0x60 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+                0x0000000008001f84                HAL_ADC_Start
+ .text.HAL_ADC_PollForConversion
+                0x0000000008001fe4       0xcc CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+                0x0000000008001fe4                HAL_ADC_PollForConversion
+ .text.HAL_ADC_GetValue
+                0x00000000080020b0        0x6 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+                0x00000000080020b0                HAL_ADC_GetValue
+ *fill*         0x00000000080020b6        0x2 
  .text.HAL_ADC_ConfigChannel
-                0x0000000008001e54       0x88 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
-                0x0000000008001e54                HAL_ADC_ConfigChannel
+                0x00000000080020b8       0x88 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+                0x00000000080020b8                HAL_ADC_ConfigChannel
+ .text.HAL_ADC_GetState
+                0x0000000008002140        0x4 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+                0x0000000008002140                HAL_ADC_GetState
  .text.HAL_NVIC_SetPriority
-                0x0000000008001edc       0x60 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
-                0x0000000008001edc                HAL_NVIC_SetPriority
+                0x0000000008002144       0x60 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
+                0x0000000008002144                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x0000000008001f3c       0x18 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
-                0x0000000008001f3c                HAL_NVIC_EnableIRQ
+                0x00000000080021a4       0x18 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
+                0x00000000080021a4                HAL_NVIC_EnableIRQ
  .text.HAL_SYSTICK_Config
-                0x0000000008001f54       0x38 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
-                0x0000000008001f54                HAL_SYSTICK_Config
+                0x00000000080021bc       0x38 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
+                0x00000000080021bc                HAL_SYSTICK_Config
  .text.HAL_GPIO_Init
-                0x0000000008001f8c      0x190 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
-                0x0000000008001f8c                HAL_GPIO_Init
+                0x00000000080021f4      0x190 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
+                0x00000000080021f4                HAL_GPIO_Init
  .text.HAL_GPIO_WritePin
-                0x000000000800211c        0xc CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
-                0x000000000800211c                HAL_GPIO_WritePin
+                0x0000000008002384        0xc CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
+                0x0000000008002384                HAL_GPIO_WritePin
  .text.HAL_GPIO_EXTI_IRQHandler
-                0x0000000008002128       0x1c CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
-                0x0000000008002128                HAL_GPIO_EXTI_IRQHandler
+                0x0000000008002390       0x1c CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
+                0x0000000008002390                HAL_GPIO_EXTI_IRQHandler
  .text.HAL_RCC_GetSysClockFreq
-                0x0000000008002144       0xb0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
-                0x0000000008002144                HAL_RCC_GetSysClockFreq
+                0x00000000080023ac       0xb0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
+                0x00000000080023ac                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_OscConfig
-                0x00000000080021f4      0x51c CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
-                0x00000000080021f4                HAL_RCC_OscConfig
+                0x000000000800245c      0x51c CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
+                0x000000000800245c                HAL_RCC_OscConfig
  .text.HAL_RCC_ClockConfig
-                0x0000000008002710      0x1d8 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
-                0x0000000008002710                HAL_RCC_ClockConfig
+                0x0000000008002978      0x1d8 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
+                0x0000000008002978                HAL_RCC_ClockConfig
  .text.Reset_Handler
-                0x00000000080028e8       0x80 CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
-                0x00000000080028e8                Reset_Handler
+                0x0000000008002b50       0x80 CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
+                0x0000000008002b50                Reset_Handler
  .text.Default_Handler
-                0x0000000008002968        0x2 CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
-                0x0000000008002968                LPTIM1_IRQHandler
-                0x0000000008002968                SPI1_IRQHandler
-                0x0000000008002968                EXTI2_3_IRQHandler
-                0x0000000008002968                ADC1_IRQHandler
-                0x0000000008002968                RTC_IRQHandler
-                0x0000000008002968                DMA1_Channel4_5_6_7_IRQHandler
-                0x0000000008002968                RCC_IRQHandler
-                0x0000000008002968                DMA1_Channel1_IRQHandler
-                0x0000000008002968                Default_Handler
-                0x0000000008002968                EXTI0_1_IRQHandler
-                0x0000000008002968                TIM21_IRQHandler
-                0x0000000008002968                WWDG_IRQHandler
-                0x0000000008002968                LPUART1_IRQHandler
-                0x0000000008002968                TIM2_IRQHandler
-                0x0000000008002968                DMA1_Channel2_3_IRQHandler
-                0x0000000008002968                USART2_IRQHandler
-                0x0000000008002968                FLASH_IRQHandler
-                0x0000000008002968                I2C1_IRQHandler
- *fill*         0x000000000800296a        0x2 
+                0x0000000008002bd0        0x2 CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
+                0x0000000008002bd0                LPTIM1_IRQHandler
+                0x0000000008002bd0                SPI1_IRQHandler
+                0x0000000008002bd0                EXTI2_3_IRQHandler
+                0x0000000008002bd0                ADC1_IRQHandler
+                0x0000000008002bd0                RTC_IRQHandler
+                0x0000000008002bd0                DMA1_Channel4_5_6_7_IRQHandler
+                0x0000000008002bd0                RCC_IRQHandler
+                0x0000000008002bd0                DMA1_Channel1_IRQHandler
+                0x0000000008002bd0                Default_Handler
+                0x0000000008002bd0                EXTI0_1_IRQHandler
+                0x0000000008002bd0                TIM21_IRQHandler
+                0x0000000008002bd0                WWDG_IRQHandler
+                0x0000000008002bd0                LPUART1_IRQHandler
+                0x0000000008002bd0                TIM2_IRQHandler
+                0x0000000008002bd0                DMA1_Channel2_3_IRQHandler
+                0x0000000008002bd0                USART2_IRQHandler
+                0x0000000008002bd0                FLASH_IRQHandler
+                0x0000000008002bd0                I2C1_IRQHandler
+ *fill*         0x0000000008002bd2        0x2 
  .text.__libc_init_array
-                0x000000000800296c       0x44 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-init.o)
-                0x000000000800296c                __libc_init_array
- .text.memset   0x00000000080029b0       0xa8 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-memset.o)
-                0x00000000080029b0                memset
+                0x0000000008002bd4       0x44 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-init.o)
+                0x0000000008002bd4                __libc_init_array
+ .text.memset   0x0000000008002c18       0xa8 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-memset.o)
+                0x0000000008002c18                memset
  .text.startup.register_fini
-                0x0000000008002a58       0x18 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-__call_atexit.o)
- .text.atexit   0x0000000008002a70       0x10 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-atexit.o)
-                0x0000000008002a70                atexit
+                0x0000000008002cc0       0x18 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .text.atexit   0x0000000008002cd8       0x10 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-atexit.o)
+                0x0000000008002cd8                atexit
  .text.__libc_fini_array
-                0x0000000008002a80       0x28 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fini.o)
-                0x0000000008002a80                __libc_fini_array
+                0x0000000008002ce8       0x28 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fini.o)
+                0x0000000008002ce8                __libc_fini_array
  .text.__retarget_lock_acquire_recursive
-                0x0000000008002aa8        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-lock.o)
-                0x0000000008002aa8                __retarget_lock_acquire_recursive
+                0x0000000008002d10        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-lock.o)
+                0x0000000008002d10                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x0000000008002aac        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-lock.o)
-                0x0000000008002aac                __retarget_lock_release_recursive
+                0x0000000008002d14        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-lock.o)
+                0x0000000008002d14                __retarget_lock_release_recursive
  .text.__register_exitproc
-                0x0000000008002ab0       0xac /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-__atexit.o)
-                0x0000000008002ab0                __register_exitproc
+                0x0000000008002d18       0xac /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-__atexit.o)
+                0x0000000008002d18                __register_exitproc
  *(.glue_7)
- .glue_7        0x0000000008002b5c        0x0 linker stubs
+ .glue_7        0x0000000008002dc4        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008002b5c        0x0 linker stubs
+ .glue_7t       0x0000000008002dc4        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008002b5c        0x0 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
+ .eh_frame      0x0000000008002dc4        0x0 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
  *(.init)
- .init          0x0000000008002b5c        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crti.o
-                0x0000000008002b5c                _init
- .init          0x0000000008002b60        0x8 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtn.o
+ .init          0x0000000008002dc4        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crti.o
+                0x0000000008002dc4                _init
+ .init          0x0000000008002dc8        0x8 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x0000000008002b68        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crti.o
-                0x0000000008002b68                _fini
- .fini          0x0000000008002b6c        0x8 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtn.o
-                0x0000000008002b74                . = ALIGN (0x4)
-                0x0000000008002b74                _etext = .
+ .fini          0x0000000008002dd0        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crti.o
+                0x0000000008002dd0                _fini
+ .fini          0x0000000008002dd4        0x8 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtn.o
+                0x0000000008002ddc                . = ALIGN (0x4)
+                0x0000000008002ddc                _etext = .
 
-.vfp11_veneer   0x0000000008002b74        0x0
- .vfp11_veneer  0x0000000008002b74        0x0 linker stubs
+.vfp11_veneer   0x0000000008002ddc        0x0
+ .vfp11_veneer  0x0000000008002ddc        0x0 linker stubs
 
-.v4_bx          0x0000000008002b74        0x0
- .v4_bx         0x0000000008002b74        0x0 linker stubs
+.v4_bx          0x0000000008002ddc        0x0
+ .v4_bx         0x0000000008002ddc        0x0 linker stubs
 
-.iplt           0x0000000008002b74        0x0
- .iplt          0x0000000008002b74        0x0 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x0000000008002ddc        0x0
+ .iplt          0x0000000008002ddc        0x0 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x0000000008002b74      0x208
-                0x0000000008002b74                . = ALIGN (0x4)
+.rodata         0x0000000008002ddc      0x228
+                0x0000000008002ddc                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0000000008002b74       0x40 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(muldf3.o)
+ .rodata        0x0000000008002ddc       0x40 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(muldf3.o)
  *(.rodata*)
- .rodata.CHARS  0x0000000008002bb4      0x1a8 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+ .rodata.main   0x0000000008002e1c       0x20 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+ .rodata.CHARS  0x0000000008002e3c      0x1a8 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
  .rodata.AHBPrescTable
-                0x0000000008002d5c       0x10 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
-                0x0000000008002d5c                AHBPrescTable
+                0x0000000008002fe4       0x10 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
+                0x0000000008002fe4                AHBPrescTable
  .rodata.PLLMulTable
-                0x0000000008002d6c        0x9 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
-                0x0000000008002d6c                PLLMulTable
- *fill*         0x0000000008002d75        0x3 
+                0x0000000008002ff4        0x9 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
+                0x0000000008002ff4                PLLMulTable
+ *fill*         0x0000000008002ffd        0x3 
  .rodata._global_impure_ptr
-                0x0000000008002d78        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-impure.o)
-                0x0000000008002d78                _global_impure_ptr
-                0x0000000008002d7c                . = ALIGN (0x4)
+                0x0000000008003000        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-impure.o)
+                0x0000000008003000                _global_impure_ptr
+                0x0000000008003004                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008002d7c        0x8
-                0x0000000008002d7c                __exidx_start = .
+.ARM            0x0000000008003004        0x8
+                0x0000000008003004                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0000000008002d7c        0x8 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(_udivmoddi4.o)
-                0x0000000008002d84                __exidx_end = .
+ .ARM.exidx     0x0000000008003004        0x8 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(_udivmoddi4.o)
+                0x000000000800300c                __exidx_end = .
 
-.rel.dyn        0x0000000008002d84        0x0
- .rel.iplt      0x0000000008002d84        0x0 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x000000000800300c        0x0
+ .rel.iplt      0x000000000800300c        0x0 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.preinit_array  0x0000000008002d84        0x0
-                0x0000000008002d84                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x000000000800300c        0x0
+                0x000000000800300c                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008002d84                PROVIDE (__preinit_array_end = .)
+                0x000000000800300c                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000000008002d84        0x8
-                0x0000000008002d84                PROVIDE (__init_array_start = .)
+.init_array     0x000000000800300c        0x8
+                0x000000000800300c                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x0000000008002d84        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-__call_atexit.o)
+                0x000000000800300c        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x0000000008002d88        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000008002d8c                PROVIDE (__init_array_end = .)
+ .init_array    0x0000000008003010        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000008003014                PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000008002d8c        0x4
-                0x0000000008002d8c                PROVIDE (__fini_array_start = .)
+.fini_array     0x0000000008003014        0x4
+                0x0000000008003014                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008002d8c        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000008002d90                PROVIDE (__fini_array_end = .)
-                0x0000000008002d90                _sidata = LOADADDR (.data)
+ .fini_array    0x0000000008003014        0x4 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000008003018                PROVIDE (__fini_array_end = .)
+                0x0000000008003018                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000      0x43c load address 0x0000000008002d90
+.data           0x0000000020000000      0x43c load address 0x0000000008003018
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
  *(.data*)
- .data.state    0x0000000020000000        0x1 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
-                0x0000000020000000                state
- *fill*         0x0000000020000001        0x3 
+ .data.shouldHandleEXTI
+                0x0000000020000000        0x1 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x0000000020000000                shouldHandleEXTI
+ .data.state    0x0000000020000001        0x1 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x0000000020000001                state
+ *fill*         0x0000000020000002        0x2 
  .data.SystemCoreClock
                 0x0000000020000004        0x4 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
                 0x0000000020000004                SystemCoreClock
@@ -1312,34 +1331,33 @@ LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-
                 0x000000002000043c                . = ALIGN (0x4)
                 0x000000002000043c                _edata = .
 
-.igot.plt       0x000000002000043c        0x0 load address 0x00000000080031cc
+.igot.plt       0x000000002000043c        0x0 load address 0x0000000008003454
  .igot.plt      0x000000002000043c        0x0 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
                 0x000000002000043c                . = ALIGN (0x4)
 
-.bss            0x000000002000043c       0x9c load address 0x00000000080031cc
+.bss            0x000000002000043c       0x9c load address 0x0000000008003454
                 0x000000002000043c                _sbss = .
                 0x000000002000043c                __bss_start__ = _sbss
  *(.bss)
  .bss           0x000000002000043c       0x1c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/crtbegin.o
  *(.bss*)
- .bss.animationIndex
-                0x0000000020000458        0x1 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
-                0x0000000020000458                animationIndex
- *fill*         0x0000000020000459        0x3 
- .bss.hadc      0x000000002000045c       0x5c CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
-                0x000000002000045c                hadc
+ .bss.hadc      0x0000000020000458       0x5c CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x0000000020000458                hadc
  .bss.loopCount
-                0x00000000200004b8        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
-                0x00000000200004b8                loopCount
- *fill*         0x00000000200004ba        0x2 
- .bss.loopTime  0x00000000200004bc        0x4 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
-                0x00000000200004bc                loopTime
+                0x00000000200004b4        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x00000000200004b4                loopCount
+ *fill*         0x00000000200004b6        0x2 
+ .bss.loopTime  0x00000000200004b8        0x4 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x00000000200004b8                loopTime
+ .bss.maxLoopCount
+                0x00000000200004bc        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x00000000200004bc                maxLoopCount
  .bss.maxSpeedRpm
-                0x00000000200004c0        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
-                0x00000000200004c0                maxSpeedRpm
- .bss.mode      0x00000000200004c2        0x1 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
-                0x00000000200004c2                mode
- *fill*         0x00000000200004c3        0x1 
+                0x00000000200004be        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x00000000200004be                maxSpeedRpm
+ .bss.mode      0x00000000200004c0        0x1 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x00000000200004c0                mode
+ *fill*         0x00000000200004c1        0x3 
  .bss.prevTick  0x00000000200004c4        0x4 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
                 0x00000000200004c4                prevTick
  .bss.speedRpm  0x00000000200004c8        0x2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
@@ -1360,7 +1378,7 @@ LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-
                 0x00000000200004d8                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x00000000200004d8      0x500 load address 0x00000000080031cc
+                0x00000000200004d8      0x500 load address 0x0000000008003454
                 0x00000000200004d8                . = ALIGN (0x8)
                 0x00000000200004d8                PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
@@ -1458,106 +1476,106 @@ LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-
 LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a
 
-.debug_info     0x0000000000000000     0x5774
- .debug_info    0x0000000000000000     0x15dc CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
- .debug_info    0x00000000000015dc      0x8da CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
- .debug_info    0x0000000000001eb6      0x132 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
- .debug_info    0x0000000000001fe8      0x342 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
- .debug_info    0x000000000000232a      0x8e0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
- .debug_info    0x0000000000002c0a     0x101c CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .debug_info    0x0000000000003c26      0x80d CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
- .debug_info    0x0000000000004433      0x6d2 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
- .debug_info    0x0000000000004b05      0xc4d CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
- .debug_info    0x0000000000005752       0x22 CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
+.debug_info     0x0000000000000000     0x58bc
+ .debug_info    0x0000000000000000     0x1724 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+ .debug_info    0x0000000000001724      0x8da CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
+ .debug_info    0x0000000000001ffe      0x132 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
+ .debug_info    0x0000000000002130      0x342 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
+ .debug_info    0x0000000000002472      0x8e0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+ .debug_info    0x0000000000002d52     0x101c CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+ .debug_info    0x0000000000003d6e      0x80d CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
+ .debug_info    0x000000000000457b      0x6d2 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
+ .debug_info    0x0000000000004c4d      0xc4d CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
+ .debug_info    0x000000000000589a       0x22 CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
 
-.debug_abbrev   0x0000000000000000     0x121f
- .debug_abbrev  0x0000000000000000      0x2db CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
- .debug_abbrev  0x00000000000002db      0x1cf CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
- .debug_abbrev  0x00000000000004aa       0xa2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
- .debug_abbrev  0x000000000000054c      0x131 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
- .debug_abbrev  0x000000000000067d      0x27c CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
- .debug_abbrev  0x00000000000008f9      0x240 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .debug_abbrev  0x0000000000000b39      0x261 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
- .debug_abbrev  0x0000000000000d9a      0x1d5 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
- .debug_abbrev  0x0000000000000f6f      0x29e CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
- .debug_abbrev  0x000000000000120d       0x12 CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
+.debug_abbrev   0x0000000000000000     0x12b1
+ .debug_abbrev  0x0000000000000000      0x36d CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+ .debug_abbrev  0x000000000000036d      0x1cf CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
+ .debug_abbrev  0x000000000000053c       0xa2 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
+ .debug_abbrev  0x00000000000005de      0x131 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
+ .debug_abbrev  0x000000000000070f      0x27c CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+ .debug_abbrev  0x000000000000098b      0x240 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+ .debug_abbrev  0x0000000000000bcb      0x261 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
+ .debug_abbrev  0x0000000000000e2c      0x1d5 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
+ .debug_abbrev  0x0000000000001001      0x29e CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
+ .debug_abbrev  0x000000000000129f       0x12 CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
 
-.debug_loc      0x0000000000000000     0x22cb
- .debug_loc     0x0000000000000000      0x254 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
- .debug_loc     0x0000000000000254       0x81 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
- .debug_loc     0x00000000000002d5      0x1ef CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
- .debug_loc     0x00000000000004c4      0x172 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
- .debug_loc     0x0000000000000636      0xd8a CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .debug_loc     0x00000000000013c0      0x433 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
- .debug_loc     0x00000000000017f3      0x3c0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
- .debug_loc     0x0000000000001bb3      0x718 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
+.debug_loc      0x0000000000000000     0x234f
+ .debug_loc     0x0000000000000000      0x2d8 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+ .debug_loc     0x00000000000002d8       0x81 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
+ .debug_loc     0x0000000000000359      0x1ef CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
+ .debug_loc     0x0000000000000548      0x172 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+ .debug_loc     0x00000000000006ba      0xd8a CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+ .debug_loc     0x0000000000001444      0x433 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
+ .debug_loc     0x0000000000001877      0x3c0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
+ .debug_loc     0x0000000000001c37      0x718 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
 
-.debug_aranges  0x0000000000000000      0x480
+.debug_aranges  0x0000000000000000      0x498
  .debug_aranges
-                0x0000000000000000       0x58 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                0x0000000000000000       0x70 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
  .debug_aranges
-                0x0000000000000058       0x30 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
+                0x0000000000000070       0x30 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
  .debug_aranges
-                0x0000000000000088       0x48 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
+                0x00000000000000a0       0x48 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
  .debug_aranges
-                0x00000000000000d0       0x28 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
+                0x00000000000000e8       0x28 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
  .debug_aranges
-                0x00000000000000f8      0x110 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+                0x0000000000000110      0x110 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
  .debug_aranges
-                0x0000000000000208      0x100 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+                0x0000000000000220      0x100 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
  .debug_aranges
-                0x0000000000000308       0x78 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
+                0x0000000000000320       0x78 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
  .debug_aranges
-                0x0000000000000380       0x58 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
+                0x0000000000000398       0x58 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
  .debug_aranges
-                0x00000000000003d8       0x80 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
+                0x00000000000003f0       0x80 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
  .debug_aranges
-                0x0000000000000458       0x28 CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
+                0x0000000000000470       0x28 CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
 
-.debug_ranges   0x0000000000000000      0x4b0
- .debug_ranges  0x0000000000000000       0x80 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
- .debug_ranges  0x0000000000000080       0x20 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
- .debug_ranges  0x00000000000000a0       0x38 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
- .debug_ranges  0x00000000000000d8       0x18 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
- .debug_ranges  0x00000000000000f0      0x100 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
- .debug_ranges  0x00000000000001f0       0xf0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .debug_ranges  0x00000000000002e0       0xc8 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
- .debug_ranges  0x00000000000003a8       0x48 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
- .debug_ranges  0x00000000000003f0       0xa0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
- .debug_ranges  0x0000000000000490       0x20 CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
+.debug_ranges   0x0000000000000000      0x4c8
+ .debug_ranges  0x0000000000000000       0x98 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+ .debug_ranges  0x0000000000000098       0x20 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
+ .debug_ranges  0x00000000000000b8       0x38 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
+ .debug_ranges  0x00000000000000f0       0x18 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
+ .debug_ranges  0x0000000000000108      0x100 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+ .debug_ranges  0x0000000000000208       0xf0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+ .debug_ranges  0x00000000000002f8       0xc8 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
+ .debug_ranges  0x00000000000003c0       0x48 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
+ .debug_ranges  0x0000000000000408       0xa0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
+ .debug_ranges  0x00000000000004a8       0x20 CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
 
-.debug_line     0x0000000000000000     0x482c
- .debug_line    0x0000000000000000      0x911 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
- .debug_line    0x0000000000000911      0x3c6 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
- .debug_line    0x0000000000000cd7      0x1db CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
- .debug_line    0x0000000000000eb2      0x35b CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
- .debug_line    0x000000000000120d      0x7ac CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
- .debug_line    0x00000000000019b9     0x10fe CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .debug_line    0x0000000000002ab7      0x65f CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
- .debug_line    0x0000000000003116      0x7ad CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
- .debug_line    0x00000000000038c3      0xe7e CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
- .debug_line    0x0000000000004741       0xeb CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
+.debug_line     0x0000000000000000     0x48b0
+ .debug_line    0x0000000000000000      0x995 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+ .debug_line    0x0000000000000995      0x3c6 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
+ .debug_line    0x0000000000000d5b      0x1db CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
+ .debug_line    0x0000000000000f36      0x35b CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
+ .debug_line    0x0000000000001291      0x7ac CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+ .debug_line    0x0000000000001a3d     0x10fe CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+ .debug_line    0x0000000000002b3b      0x65f CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
+ .debug_line    0x000000000000319a      0x7ad CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
+ .debug_line    0x0000000000003947      0xe7e CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
+ .debug_line    0x00000000000047c5       0xeb CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
 
-.debug_str      0x0000000000000000     0x1cab
- .debug_str     0x0000000000000000      0xbbf CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
-                                        0xc6b (size before relaxing)
- .debug_str     0x0000000000000bbf       0xb5 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
+.debug_str      0x0000000000000000     0x1d06
+ .debug_str     0x0000000000000000      0xc64 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+                                        0xd10 (size before relaxing)
+ .debug_str     0x0000000000000c64       0xb5 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
                                         0x7a9 (size before relaxing)
- .debug_str     0x0000000000000c74       0xf4 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
+ .debug_str     0x0000000000000d19       0xf4 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
                                         0x2bb (size before relaxing)
- .debug_str     0x0000000000000d68       0xf0 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
+ .debug_str     0x0000000000000e0d       0xf0 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
                                         0x383 (size before relaxing)
- .debug_str     0x0000000000000e58      0x458 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+ .debug_str     0x0000000000000efd      0x458 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
                                         0x8a6 (size before relaxing)
- .debug_str     0x00000000000012b0      0x370 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+ .debug_str     0x0000000000001355      0x326 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
                                         0xa2a (size before relaxing)
- .debug_str     0x0000000000001620      0x2b6 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
+ .debug_str     0x000000000000167b      0x2b6 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
                                         0x655 (size before relaxing)
- .debug_str     0x00000000000018d6      0x118 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
+ .debug_str     0x0000000000001931      0x118 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
                                         0x503 (size before relaxing)
- .debug_str     0x00000000000019ee      0x237 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
+ .debug_str     0x0000000000001a49      0x237 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
                                         0x7a3 (size before relaxing)
- .debug_str     0x0000000000001c25       0x86 CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
+ .debug_str     0x0000000000001c80       0x86 CMakeFiles/STM32L010_CLion.elf.dir/startup/startup_stm32l010x8.s.obj
                                          0xf8 (size before relaxing)
 
 .comment        0x0000000000000000       0x4d
@@ -1572,31 +1590,31 @@ LOAD /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-
  .comment       0x000000000000004d       0x4e CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
  .comment       0x000000000000004d       0x4e CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
 
-.debug_frame    0x0000000000000000      0xdd4
- .debug_frame   0x0000000000000000       0xe4 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
- .debug_frame   0x00000000000000e4       0x54 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
- .debug_frame   0x0000000000000138       0x80 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
- .debug_frame   0x00000000000001b8       0x38 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
- .debug_frame   0x00000000000001f0      0x22c CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
- .debug_frame   0x000000000000041c      0x2b8 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .debug_frame   0x00000000000006d4       0xe4 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
- .debug_frame   0x00000000000007b8       0xc0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
- .debug_frame   0x0000000000000878      0x144 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
- .debug_frame   0x00000000000009bc       0x20 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
- .debug_frame   0x00000000000009dc       0x34 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(_muldi3.o)
- .debug_frame   0x0000000000000a10       0x2c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(_fixunsdfsi.o)
- .debug_frame   0x0000000000000a3c       0x3c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(_udivmoddi4.o)
- .debug_frame   0x0000000000000a78       0x3c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(muldf3.o)
- .debug_frame   0x0000000000000ab4       0x3c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(subdf3.o)
- .debug_frame   0x0000000000000af0       0x2c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(fixdfsi.o)
- .debug_frame   0x0000000000000b1c       0x28 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(floatunsidf.o)
- .debug_frame   0x0000000000000b44       0x38 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(eqdf2.o)
- .debug_frame   0x0000000000000b7c       0x34 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(gedf2.o)
- .debug_frame   0x0000000000000bb0       0x34 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(ledf2.o)
- .debug_frame   0x0000000000000be4       0x2c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-init.o)
- .debug_frame   0x0000000000000c10       0x30 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-memset.o)
- .debug_frame   0x0000000000000c40       0x54 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-__call_atexit.o)
- .debug_frame   0x0000000000000c94       0x28 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-atexit.o)
- .debug_frame   0x0000000000000cbc       0x2c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fini.o)
- .debug_frame   0x0000000000000ce8       0xb0 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-lock.o)
- .debug_frame   0x0000000000000d98       0x3c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-__atexit.o)
+.debug_frame    0x0000000000000000      0xe0c
+ .debug_frame   0x0000000000000000      0x11c CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj
+ .debug_frame   0x000000000000011c       0x54 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_hal_msp.c.obj
+ .debug_frame   0x0000000000000170       0x80 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/stm32l0xx_it.c.obj
+ .debug_frame   0x00000000000001f0       0x38 CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/system_stm32l0xx.c.obj
+ .debug_frame   0x0000000000000228      0x22c CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+ .debug_frame   0x0000000000000454      0x2b8 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+ .debug_frame   0x000000000000070c       0xe4 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
+ .debug_frame   0x00000000000007f0       0xc0 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
+ .debug_frame   0x00000000000008b0      0x144 CMakeFiles/STM32L010_CLion.elf.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
+ .debug_frame   0x00000000000009f4       0x20 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .debug_frame   0x0000000000000a14       0x34 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(_muldi3.o)
+ .debug_frame   0x0000000000000a48       0x2c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(_fixunsdfsi.o)
+ .debug_frame   0x0000000000000a74       0x3c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000000000000ab0       0x3c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(muldf3.o)
+ .debug_frame   0x0000000000000aec       0x3c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(subdf3.o)
+ .debug_frame   0x0000000000000b28       0x2c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(fixdfsi.o)
+ .debug_frame   0x0000000000000b54       0x28 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(floatunsidf.o)
+ .debug_frame   0x0000000000000b7c       0x38 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(eqdf2.o)
+ .debug_frame   0x0000000000000bb4       0x34 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(gedf2.o)
+ .debug_frame   0x0000000000000be8       0x34 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/thumb/v6-m/nofp/libgcc.a(ledf2.o)
+ .debug_frame   0x0000000000000c1c       0x2c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-init.o)
+ .debug_frame   0x0000000000000c48       0x30 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000c78       0x54 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-__call_atexit.o)
+ .debug_frame   0x0000000000000ccc       0x28 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-atexit.o)
+ .debug_frame   0x0000000000000cf4       0x2c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-fini.o)
+ .debug_frame   0x0000000000000d20       0xb0 /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-lock.o)
+ .debug_frame   0x0000000000000dd0       0x3c /usr/local/Caskroom/gcc-arm-embedded/10-2020-q4-major/gcc-arm-none-eabi-10-2020-q4-major/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(lib_a-__atexit.o)
