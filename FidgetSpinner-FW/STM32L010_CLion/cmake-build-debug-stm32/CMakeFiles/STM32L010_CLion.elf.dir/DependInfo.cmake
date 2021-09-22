@@ -1,3 +1,7 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
   "ASM"
@@ -63,6 +67,10 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy"
   "../Drivers/CMSIS/Device/ST/STM32L0xx/Include"
   "../Drivers/CMSIS/Include"
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
   )
 
 # Targets to which this target links.

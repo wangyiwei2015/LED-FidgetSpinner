@@ -119,7 +119,8 @@ static void MX_ADC_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 uint32_t loadEEPData() {
-    return (*(__IO uint32_t*)(DATA_EEPROM_BASE + 1 + eepDataOffset));
+    const uint32_t saved = *(__IO uint32_t*)(DATA_EEPROM_BASE + 4 + eepDataOffset * 4);
+    return saved;
 }
 //[31:16] max speed
 //[15:00] max loops
@@ -128,7 +129,7 @@ void saveEEPData(uint32_t new) {
     HAL_DATA_EEPROMEx_Unlock();
     HAL_DATA_EEPROMEx_Program(
         FLASH_TYPEPROGRAMDATA_WORD,
-        DATA_EEPROM_BASE + 1 + eepDataOffset,
+        DATA_EEPROM_BASE + 4 + eepDataOffset * 4,
         new);
     shouldHandleEXTI = 1;
 }
@@ -156,7 +157,7 @@ void showChar(const uint8_t id) {
 //        SET_LED(CHARS[str][line]);
 //        HAL_Delay(intervalScale * _SPACE_LINE_INTERVAL); //Pixel line width
 //    }
-    const uint32_t lineInterval = intervalScale * _SPACE_LINE_INTERVAL;
+    const uint32_t lineInterval = (intervalScale * _SPACE_LINE_INTERVAL);
     SET_LED(CHARS[id][0]);
     HAL_Delay(lineInterval);
     SET_LED(CHARS[id][1]);
@@ -174,7 +175,7 @@ void showChar(const uint8_t id) {
     SET_LED(CHARS[id][7]);
     HAL_Delay(lineInterval);
     SET_LED(0xff);
-    HAL_Delay(intervalScale * _SPACE_CHAR_INTERVAL); //Char spacing width
+    HAL_Delay((intervalScale * _SPACE_CHAR_INTERVAL)); //Char spacing width
 }
 //example: str = [0,6,4,52,27,25,22] -> "064 RPM"
 
@@ -253,10 +254,7 @@ static inline void displayInMode(uint8_t _mode) {
                 showChar(27);
             }
             break;
-        case 4: //4 - Animation |TODO
-            //
-            break;
-        case 5: //5 - Random gen - yes / no / maybe
+        case 4: //4 - Random gen - yes / no / maybe
             if(prevTick - spinStartTime < 1280) {
                 showChar(34); //Y
                 showChar(14); //E
@@ -289,6 +287,9 @@ static inline void displayInMode(uint8_t _mode) {
                     showChar(14); //E
                 }
             }
+            break;
+        case 5: //5 - Animation |TODO
+            //
             break;
         case 6: //6 - User defined text |TODO
             //
@@ -324,8 +325,7 @@ static inline void displayInMode(uint8_t _mode) {
                 showChar(22); //M
             }
             break;
-        default:
-            break;
+        default: break;
     }
 }
 
@@ -404,22 +404,7 @@ int main(void)
   MX_GPIO_Init();
   MX_ADC_Init();
   /* USER CODE BEGIN 2 */
-    //TODO: Debug test
-    uint8_t adcv = 0;
-    while(1) {
-        adcv = readBatteryADC();
-        switch(adcv / 10) {
-            case 0:SET_LED(0b11111110);
-            case 1:SET_LED(0b11111100);
-            case 2:SET_LED(0b11111000);
-            case 3:SET_LED(0b11110000);
-            case 4:SET_LED(0b11100000);
-            case 5:SET_LED(0b11000000);
-            case 6:SET_LED(0b10000000);
-            case 7:SET_LED(0b00000000);
-        }
-        HAL_Delay(200);
-    }
+  SHOW_MODE;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -618,6 +603,7 @@ static void MX_GPIO_Init(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
+    SET_LED(0b11110100);
   /* User can add his own implementation to report the HAL error return state */
   __disable_irq();
   while (1)

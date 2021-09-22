@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/local/bin/arm-none-eabi-gcc -DCMAKE_CXX_COMPILER=/usr/local/bin/arm-none-eabi-g++ -G "CodeBlocks - Unix Makefiles" /Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/local/bin/arm-none-eabi-gcc -DCMAKE_CXX_COMPILER=/usr/local/bin/arm-none-eabi-g++ -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/wangyiwei/Documents/GitHub_repo/LED-FidgetSpinner/FidgetSpinner-FW/STM32L010_CLion
 -- The C compiler identification is GNU 10.2.1
 -- The CXX compiler identification is GNU 10.2.1
 -- The ASM compiler identification is GNU
