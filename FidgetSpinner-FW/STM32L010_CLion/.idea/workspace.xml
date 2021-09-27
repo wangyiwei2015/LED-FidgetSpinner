@@ -14,16 +14,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dbab952c-b0a1-4035-847b-0545e2493ae2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.elf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.hex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb-bak" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb-bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.sch" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.sch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.sch-bak" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.sch-bak" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

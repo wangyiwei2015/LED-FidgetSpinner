@@ -766,19 +766,8 @@ F 3 "" H 3400 6150 50  0001 C CNN
 	1    3400 6150
 	1    0    0    -1  
 $EndComp
-Text GLabel 7350 5550 0    50   BiDi ~ 0
+Text GLabel 7350 5650 0    50   BiDi ~ 0
 SWEN
-$Comp
-L Connector_Generic:Conn_01x05 J1
-U 1 1 6136C921
-P 7550 5350
-F 0 "J1" H 7630 5392 50  0000 L CNN
-F 1 "EdgeConnector" H 7630 5301 50  0000 L CNN
-F 2 "WYW_Package:Edge_2x05_2.54" H 7550 5350 50  0001 C CNN
-F 3 "~" H 7550 5350 50  0001 C CNN
-	1    7550 5350
-	1    0    0    -1  
-$EndComp
 Text GLabel 4050 4750 2    50   BiDi ~ 0
 SWDIO
 Text GLabel 4050 4650 2    50   BiDi ~ 0
@@ -989,4 +978,38 @@ Wire Wire Line
 	7300 2200 7200 2200
 Wire Wire Line
 	7400 2100 7400 2250
+$Comp
+L Connector:Conn_01x06_Male J1
+U 1 1 61518390
+P 7700 5350
+F 0 "J1" H 7672 5324 50  0000 R CNN
+F 1 "DBG_CONN" H 7672 5233 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal" H 7700 5350 50  0001 C CNN
+F 3 "~" H 7700 5350 50  0001 C CNN
+	1    7700 5350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0111
+U 1 1 615233D8
+P 7350 5550
+F 0 "#PWR0111" H 7350 5400 50  0001 C CNN
+F 1 "VCC" V 7350 5750 50  0000 C CNN
+F 2 "" H 7350 5550 50  0001 C CNN
+F 3 "" H 7350 5550 50  0001 C CNN
+	1    7350 5550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7350 5150 7500 5150
+Wire Wire Line
+	7350 5250 7500 5250
+Wire Wire Line
+	7350 5350 7500 5350
+Wire Wire Line
+	7350 5450 7500 5450
+Wire Wire Line
+	7350 5550 7500 5550
+Wire Wire Line
+	7350 5650 7500 5650
 $EndSCHEMATC
