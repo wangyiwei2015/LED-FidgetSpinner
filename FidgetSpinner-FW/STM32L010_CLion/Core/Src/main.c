@@ -13,6 +13,15 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define _STATE_STILL 1
+#define _STATE_FIRSTROUND 2
+#define _STATE_RUNNING 3
+//Parameters
+#define _SPACE_LINE_INTERVAL 10
+#define _SPACE_CHAR_INTERVAL 40
+#define _ADC_TIMEOUT 50
+//Debug |TODO: Comment out this def on production
+#define _DEBUG_MODE
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -20,14 +29,9 @@
 #define SET_LED(data) GPIOA->BSRR = (data & 0xff)|((~data & 0xff)<<16)
 #define SHOW_MODE SET_LED(~(0b10000000 >> mode))
 
-#define _STATE_STILL 1
-#define _STATE_FIRSTROUND 2
-#define _STATE_RUNNING 3
-
-//Parameters
-#define _SPACE_LINE_INTERVAL 10
-#define _SPACE_CHAR_INTERVAL 40
-#define _ADC_TIMEOUT 50
+void debug() {
+    SET_LED(0);
+}
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -195,11 +199,10 @@ static inline void displayInMode(uint8_t _mode) {
             showChar(loopCount % 10);
             break;
         case 1: //1 - Timer +mm:ss
-            __NOP();
+            showChar(43); //+
             const uint32_t _spinTime = (prevTick - spinStartTime) / 1000;
             const uint8_t _sec = (uint8_t)(_spinTime % 60);
             const uint8_t _min = (uint8_t)(_spinTime / 60);
-            showChar(43); //+
             showChar(_min / 10);
             showChar(_min % 10);
             showChar(45); //:
@@ -216,18 +219,19 @@ static inline void displayInMode(uint8_t _mode) {
                 showChar(10); //A
                 showChar(28); //S
                 showChar(29); //T
+            } else {
+                if (speedRpm >= 1000)
+                    showChar((uint8_t) (speedRpm / 1000));
+                if (speedRpm >= 100)
+                    showChar((uint8_t) ((speedRpm % 1000) / 100));
+                if (speedRpm >= 10)
+                    showChar((uint8_t) (speedRpm / 10));
+                showChar(speedRpm % 10);
+                showChar(52); //_spacer_
+                showChar(27); //R
+                showChar(25); //P
+                showChar(22); //M
             }
-            if(speedRpm >= 1000)
-                showChar((uint8_t)(speedRpm / 1000));
-            if(speedRpm >= 100)
-                showChar((uint8_t)((speedRpm % 1000) / 100));
-            if(speedRpm >= 10)
-                showChar((uint8_t)(speedRpm / 10));
-            showChar(speedRpm % 10);
-            showChar(52); //_spacer_
-            showChar(27); //R
-            showChar(25); //P
-            showChar(22); //M
             break;
         case 3: //3 - Battery
             __NOP();
@@ -330,6 +334,9 @@ static inline void displayInMode(uint8_t _mode) {
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+#ifdef _DEBUG_MODE
+    return;
+#endif
     if(!shouldHandleEXTI) return;
     if(GPIO_Pin == GPIO_PIN_11) { //Button
         if(state == _STATE_STILL) {
@@ -355,7 +362,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
             case _STATE_RUNNING:
                 prevTick = tick;
                 //loopTime in ms
-                loopTime = (loopTime >> 4) + ((tick - prevTick) >> 4) * 3;
+                loopTime = (loopTime >> 2) + ((tick - prevTick) >> 2) * 3;
                 ++loopCount;
                 speedRpm = 60000 / loopTime;
                 displayInMode(mode);
@@ -392,19 +399,25 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
+#ifndef _DEBUG_MODE
     uint8_t savedOffset = *(__IO uint8_t*)(DATA_EEPROM_BASE);
     eepDataOffset = savedOffset;
     uint32_t savedData = 0;
     savedData = loadEEPData();
     maxSpeedRpm = savedData >> 16;
     maxLoopCount = savedData % (1 << 16);
+#endif
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_ADC_Init();
   /* USER CODE BEGIN 2 */
-  SHOW_MODE;
+#ifdef _DEBUG_MODE
+    debug();
+#else
+    SHOW_MODE;
+#endif
   /* USER CODE END 2 */
 
   /* Infinite loop */

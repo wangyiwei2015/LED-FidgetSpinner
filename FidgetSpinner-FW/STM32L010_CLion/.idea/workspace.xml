@@ -13,28 +13,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbab952c-b0a1-4035-847b-0545e2493ae2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/STM32L010_CLion2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/CMakeError.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/STM32L010_CLion.elf.dir/Core/Src/main.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.hex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb-bak" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb-bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/fp-info-cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/fp-info-cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.sch" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.sch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.sch-bak" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.sch-bak" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +57,6 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -90,6 +74,7 @@
       <workItem from="1631892911137" duration="8000" />
       <workItem from="1631892931750" duration="14281000" />
       <workItem from="1632294858058" duration="4815000" />
+      <workItem from="1632655719837" duration="2579000" />
     </task>
     <servers />
   </component>
