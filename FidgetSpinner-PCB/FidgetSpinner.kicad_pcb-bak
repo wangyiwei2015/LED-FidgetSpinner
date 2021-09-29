@@ -1906,7 +1906,7 @@
     )
   )
 
-  (gr_circle (center 100 100) (end 111 100) (layer Dwgs.User) (width 0.15))
+  (gr_circle (center 100 100) (end 111.5 100) (layer Dwgs.User) (width 0.15))
   (gr_line (start 114.808 106.172) (end 116.332 106.172) (layer F.SilkS) (width 0.12))
   (gr_line (start 114.808 105.664) (end 114.808 106.172) (layer F.SilkS) (width 0.12))
   (gr_line (start 114.808 103.632) (end 116.332 103.632) (layer F.SilkS) (width 0.12))

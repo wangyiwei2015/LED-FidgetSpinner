@@ -1,2 +1,3 @@
 (sym_lib_table
+  (lib (name FidgetSpinner-rescue)(type Legacy)(uri ${KIPRJMOD}/FidgetSpinner-rescue.lib)(options "")(descr ""))
 )
