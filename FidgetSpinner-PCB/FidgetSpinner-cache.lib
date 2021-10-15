@@ -33,29 +33,6 @@ X Pin_6 6 200 -300 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_02x02_Counter_Clockwise
-#
-DEF Connector_Generic_Conn_02x02_Counter_Clockwise J 0 40 Y N 1 F N
-F0 "J" 50 100 50 H V C CNN
-F1 "Connector_Generic_Conn_02x02_Counter_Clockwise" 50 -200 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Connector*:*_2x??_*
-$ENDFPLIST
-DRAW
-S -50 -95 0 -105 1 1 6 N
-S -50 5 0 -5 1 1 6 N
-S -50 50 150 -150 1 1 10 f
-S 150 -95 100 -105 1 1 6 N
-S 150 5 100 -5 1 1 6 N
-X Pin_1 1 -200 0 150 R 50 50 1 1 P
-X Pin_2 2 -200 -100 150 R 50 50 1 1 P
-X Pin_3 3 300 -100 150 L 50 50 1 1 P
-X Pin_4 4 300 0 150 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # Device_Battery_Cell
 #
 DEF Device_Battery_Cell BT 0 0 N N 1 F N
@@ -204,6 +181,22 @@ C 80 0 20 0 0 0 N
 P 2 0 0 0 -60 10 60 70 N
 X A 1 -200 0 100 R 50 50 1 1 P
 X B 2 200 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# WYW_Library_GP2S60
+#
+DEF WYW_Library_GP2S60 U 0 40 Y Y 1 F N
+F0 "U" 0 0 50 H V C CNN
+F1 "WYW_Library_GP2S60" 0 -350 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -250 -50 250 -300 1 1 0 N
+X Rx+ 1 -350 -150 100 R 50 50 1 1 P
+X Rx- 2 -350 -250 100 R 50 50 1 1 P
+X Tx- 3 350 -250 100 L 50 50 1 1 P
+X Tx+ 4 350 -150 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
