@@ -17,18 +17,20 @@
 #define _STATE_FIRSTROUND 2
 #define _STATE_RUNNING 3
 //Parameters
-#define _SPACE_LINE_INTERVAL 10
-#define _SPACE_CHAR_INTERVAL 40
+//#define _SPACE_LINE_INTERVAL 10
+//#define _SPACE_CHAR_INTERVAL 100
+#define _SPACE_LINE_SCALE 10
+#define _SPACE_CHAR_SCALE 10
 #define _ADC_TIMEOUT 50
 //Debug |TODO: Comment out this def on production
-#define _DEBUG_MODE
+// #define _DEBUG_MODE //----------------------------------------- DEBUG ------|
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 #define SET_LED(data) GPIOA->BSRR = (data & 0xff)|((~data & 0xff)<<16)
-#define SHOW_MODE SET_LED(~(0b10000000 >> mode))
-
+#define SHOW_MODE SET_LED(~(0b1 << mode))
+uint8_t intt = 0;
 void debug() {
     SET_LED(0);
     uint8_t i11 = 0;
@@ -36,8 +38,8 @@ void debug() {
     while(1) {
         i11 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_11);
         i12 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_12);
-        SET_LED(0b11111111 - (i11 << 1) - (i12 << 6));
-        HAL_Delay(200);
+        SET_LED(0b11111111 - (i11 << 1) - (i12 << 6) - (intt));
+        HAL_Delay(100);
     }
 }
 /* USER CODE END PM */
@@ -46,7 +48,7 @@ void debug() {
 ADC_HandleTypeDef hadc;
 
 /* USER CODE BEGIN PV */
-static const uint8_t CHARS[53][8] = {
+static const uint8_t CHARS[53][5] = {
     {0b10000001,0b01101110,0b01110110,0b01111010,0b10000001},//0
     {0b01111111,0b01111101,0b00000000,0b01111111,0b01111111},//1
     {0b00111101,0b01011110,0b01101110,0b01110110,0b01111001},//2
@@ -106,6 +108,7 @@ static const uint8_t CHARS[53][8] = {
 uint8_t mode = 0;
 uint8_t state = _STATE_STILL;
 uint8_t shouldHandleEXTI = 1;
+uint8_t rnd;
 //Runtime - SysTick
 uint32_t prevTick = 0;
 uint32_t loopTime = 0;
@@ -163,13 +166,10 @@ uint8_t readBatteryADC() {
 
 void showChar(const uint8_t id) {
     //for(unsigned character=0; character<sizeof(*str); ++character) {
-    double intervalScale = loopTime;
-    intervalScale /= 1024;
-//    for(uint8_t line=0; line<8; ++line) {
-//        SET_LED(CHARS[str][line]);
-//        HAL_Delay(intervalScale * _SPACE_LINE_INTERVAL); //Pixel line width
-//    }
-    const uint32_t lineInterval = (intervalScale * _SPACE_LINE_INTERVAL);
+    volatile uint32_t intervalScale = loopTime;
+    //intervalScale /= 512;
+    //uint32_t lineInterval = (intervalScale * (double)_SPACE_LINE_INTERVAL);
+    uint32_t lineInterval = (intervalScale / _SPACE_LINE_SCALE);
     SET_LED(CHARS[id][0]);
     HAL_Delay(lineInterval);
     SET_LED(CHARS[id][1]);
@@ -180,18 +180,19 @@ void showChar(const uint8_t id) {
     HAL_Delay(lineInterval);
     SET_LED(CHARS[id][4]);
     HAL_Delay(lineInterval);
-    SET_LED(CHARS[id][5]);
+    SET_LED(0b11111111);
+    //HAL_Delay((intervalScale * (double)_SPACE_CHAR_INTERVAL)); //Char spacing width
+    //HAL_Delay((intervalScale / _SPACE_CHAR_SCALE));
     HAL_Delay(lineInterval);
-    SET_LED(CHARS[id][6]);
     HAL_Delay(lineInterval);
-    SET_LED(CHARS[id][7]);
     HAL_Delay(lineInterval);
-    SET_LED(0xff);
-    HAL_Delay((intervalScale * _SPACE_CHAR_INTERVAL)); //Char spacing width
+    HAL_Delay(lineInterval);
 }
 //example: str = [0,6,4,52,27,25,22] -> "064 RPM"
 
 static inline void displayInMode(uint8_t _mode) {
+    if(!shouldHandleEXTI) return;
+    shouldHandleEXTI = 0;
     switch(_mode) {
         case 0: //0 - Loops counter
             showChar(49);
@@ -280,7 +281,6 @@ static inline void displayInMode(uint8_t _mode) {
                 showChar(52); //_SPACER_
                 showChar(39); //?
             } else {
-                uint8_t rnd = prevTick % 16;
                 if (rnd < 7) {
                     showChar(49); //_cdot_
                     showChar(34); //Y
@@ -303,10 +303,17 @@ static inline void displayInMode(uint8_t _mode) {
         case 5: //5 - Animation |TODO
             //
             break;
-        case 6: //6 - User defined text |TODO
-            //
+        case 7: //7 - User defined text |TODO
+            showChar(0);
+            showChar(1);
+            showChar(2);
+            showChar(3);
+            showChar(4);
+            showChar(5);
+            showChar(6);
+            showChar(7);
             break;
-        case 7: //7 - Best score - max loops max time max speed
+        case 6: //6 - Best score - max loops max time max speed
             showChar(11); //B
             showChar(14); //E
             showChar(28); //S
@@ -339,10 +346,14 @@ static inline void displayInMode(uint8_t _mode) {
             break;
         default: break;
     }
+    shouldHandleEXTI = 1;
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 #ifdef _DEBUG_MODE
+    if(GPIO_Pin == GPIO_PIN_12) {
+        intt = ~intt;
+    }
     return;
 #endif
     if(!shouldHandleEXTI) return;
@@ -366,11 +377,13 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
                 prevTick = tick;
                 spinStartTime = tick;
                 loopCount = 1;
+                rnd = prevTick % 16;
                 break;
             case _STATE_RUNNING:
                 prevTick = tick;
                 //loopTime in ms
-                loopTime = (loopTime >> 2) + ((tick - prevTick) >> 2) * 3;
+                //loopTime = (loopTime >> 2) + ((tick - prevTick) >> 2) * 3;
+                loopTime = tick - prevTick;
                 ++loopCount;
                 speedRpm = 60000 / loopTime;
                 displayInMode(mode);
@@ -608,7 +621,8 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI4_15_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(EXTI4_15_IRQn, 1, 0);
   HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
 
 }
