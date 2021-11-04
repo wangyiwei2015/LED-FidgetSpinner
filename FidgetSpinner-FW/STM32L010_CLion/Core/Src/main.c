@@ -31,6 +31,14 @@
 
 void debug() {
     SET_LED(0);
+    uint8_t i11 = 0;
+    uint8_t i12 = 0;
+    while(1) {
+        i11 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_11);
+        i12 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_12);
+        SET_LED(0b11111111 - (i11 << 1) - (i12 << 6));
+        HAL_Delay(200);
+    }
 }
 /* USER CODE END PM */
 
@@ -596,7 +604,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : PA12 */
   GPIO_InitStruct.Pin = GPIO_PIN_12;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL; //Prev: PULLUP
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/

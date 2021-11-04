@@ -14,6 +14,14 @@
   <component name="ChangeListManager">
     <list default="true" id="dbab952c-b0a1-4035-847b-0545e2493ae2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STM32L010_CLion.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/STM32L010_CLion.ioc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.elf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-stm32/STM32L010_CLion.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +55,14 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -65,6 +78,7 @@
       <workItem from="1631892931750" duration="14281000" />
       <workItem from="1632294858058" duration="4815000" />
       <workItem from="1632655719837" duration="2579000" />
+      <workItem from="1634739707314" duration="1695000" />
     </task>
     <servers />
   </component>
