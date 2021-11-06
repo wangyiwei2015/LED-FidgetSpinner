@@ -12,7 +12,37 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbab952c-b0a1-4035-847b-0545e2493ae2" name="Default Changelist" comment="" />
+    <list default="true" id="dbab952c-b0a1-4035-847b-0545e2493ae2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../ATSAMD20_PlatformIO/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATSAMD20_PlatformIO/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATSAMD20_PlatformIO/include/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATSAMD20_PlatformIO/lib/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATSAMD20_PlatformIO/platformio.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATSAMD20_PlatformIO/src/Defs/consts.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATSAMD20_PlatformIO/src/Defs/pins.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATSAMD20_PlatformIO/src/Power/Power.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATSAMD20_PlatformIO/src/Power/Power.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATSAMD20_PlatformIO/src/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATSAMD20_PlatformIO/src/main.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATSAMD20_PlatformIO/test/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-GP2S60_Tester/FidgetSpinner-GP2S60_Tester-cache.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-GP2S60_Tester/FidgetSpinner-GP2S60_Tester.kicad_pcb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-GP2S60_Tester/FidgetSpinner-GP2S60_Tester.kicad_pcb-bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-GP2S60_Tester/FidgetSpinner-GP2S60_Tester.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-GP2S60_Tester/FidgetSpinner-GP2S60_Tester.sch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-GP2S60_Tester/FidgetSpinner-GP2S60_Tester.sch-bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-GP2S60_Tester/fp-info-cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb-bak" beforeDir="false" afterPath="$PROJECT_DIR$/../../FidgetSpinner-PCB/FidgetSpinner.kicad_pcb-bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-eSWD_5pin/SWD_5pin-cache.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-eSWD_5pin/SWD_5pin.kicad_pcb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-eSWD_5pin/SWD_5pin.kicad_pcb-bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-eSWD_5pin/SWD_5pin.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-eSWD_5pin/SWD_5pin.sch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-eSWD_5pin/SWD_5pin.sch-bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FidgetSpinner-eSWD_5pin/fp-info-cache" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +99,7 @@
       <workItem from="1632294858058" duration="4815000" />
       <workItem from="1632655719837" duration="2579000" />
       <workItem from="1634739707314" duration="1695000" />
-      <workItem from="1636029104826" duration="5190000" />
+      <workItem from="1636029104826" duration="5653000" />
     </task>
     <servers />
   </component>
