@@ -1,7 +1,7 @@
 # LED-FidgetSpinner
-Battery-powered LED Fidget Spinner.**PhOVS**
+Battery-powered LED Fidget Spinner. **PhOVS**
 
-Design & concept reference: *8Mode Fidget Spinner*
+Design & concept reference: [8Mode Fidget Spinner](https://www.8mode.com/spinner/)
 
 
 
@@ -51,7 +51,7 @@ Firmware: **STM32CubeMX** & **CLion**
 
 
 
-More about coin-sized 3V battery cells
+Different coin-sized 3V battery cells
 
 | Name   | Capacity(mAh) | I(uA) | Ic(mA) | Imax(mA) | Weight(g) |
 | ------ | ------------- | ----- | ------ | -------- | --------- |
