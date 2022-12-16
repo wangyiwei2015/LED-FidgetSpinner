@@ -7,6 +7,8 @@ Design & concept reference: [8Mode Fidget Spinner](https://www.8mode.com/spinner
 
 Warning: this is still under development.
 
+Warning: there maybe better MCU model for this application.
+
 
 
 ### Development Tools
